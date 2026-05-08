@@ -1,0 +1,344 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: questionnaireCreation.spec.ts >> Questionnaire Creation Tests >> TC_CR_001-Verify 'Add' button is disabled in questionnaire creation when required fields  are empty
+- Location: tests/questionnaireCreation.spec.ts:42:9
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: locator('[data-testid="add"]')
+Expected: visible
+Timeout: 15000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 15000ms
+  - waiting for locator('[data-testid="add"]')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - text: ×
+  - link "ticket or feedback" [ref=e2] [cursor=pointer]:
+    - /url: javascript:void(0)
+    - img "ticket or feedback" [ref=e3]
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e10]:
+        - button "leftMenuOpen" [ref=e11] [cursor=pointer]:
+          - img [ref=e12]
+        - img [ref=e17]
+        - generic [ref=e23] [cursor=pointer]: search
+        - button "Turn off admin role" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]:
+            - img
+        - button [ref=e27] [cursor=pointer]:
+          - img [ref=e29]:
+            - img [ref=e30]
+        - generic [ref=e35]:
+          - button [ref=e36] [cursor=pointer]:
+            - img [ref=e38]:
+              - img [ref=e39]
+          - status "17" [ref=e40]
+        - button "fullscreen" [ref=e41] [cursor=pointer]:
+          - generic [ref=e42]: fullscreen
+        - button "Open beamer" [ref=e43] [cursor=pointer]:
+          - img [ref=e44]:
+            - img
+          - generic [ref=e45]: "1"
+        - button "freshDesk" [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]: info
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - img [ref=e50] [cursor=pointer]
+          - button "dehaze" [ref=e51] [cursor=pointer]:
+            - generic [ref=e52]: dehaze
+        - list [ref=e53]:
+          - generic [ref=e54]:
+            - button "profile pic" [ref=e55]
+            - generic [ref=e56]: mahendra j
+          - button "keyboard_arrow_down mahendra.juvvalapati@qualitlabs.com" [ref=e57] [cursor=pointer]:
+            - generic [ref=e58]: keyboard_arrow_down
+            - generic [ref=e59]: mahendra.juvvalapati@qualitlabs.com
+          - list [ref=e60]:
+            - button "exit_to_app Logout" [ref=e61] [cursor=pointer]:
+              - generic [ref=e62]: exit_to_app
+              - generic [ref=e63]: Logout
+        - list [ref=e65]:
+          - button "home Dashboard" [ref=e66] [cursor=pointer]:
+            - generic [ref=e67]: home
+            - generic [ref=e68]: Dashboard
+          - button "widgets Modules keyboard_arrow_down" [ref=e69] [cursor=pointer]:
+            - generic [ref=e70]: widgets
+            - generic [ref=e71]: Modules
+            - generic [ref=e72]: keyboard_arrow_down
+          - list [ref=e73]:
+            - button "Strategy" [ref=e74] [cursor=pointer]:
+              - img [ref=e75]:
+                - img
+              - generic [ref=e76]: Strategy
+            - button "Policy" [ref=e77] [cursor=pointer]:
+              - img [ref=e78]:
+                - img
+              - generic [ref=e79]: Policy
+            - button "Programs" [ref=e80] [cursor=pointer]:
+              - img [ref=e81]:
+                - img
+              - generic [ref=e82]: Programs
+            - button "projects" [ref=e83] [cursor=pointer]:
+              - img [ref=e84]:
+                - img
+              - generic [ref=e85]: projects
+            - button "Dialogues" [ref=e86] [cursor=pointer]:
+              - img [ref=e87]:
+                - img
+              - generic [ref=e88]: Dialogues
+            - button "Objectives" [ref=e89] [cursor=pointer]:
+              - img [ref=e90]:
+                - img
+              - generic [ref=e91]: Objectives
+            - button "Processes" [ref=e92] [cursor=pointer]:
+              - img [ref=e93]:
+                - img
+              - generic [ref=e94]: Processes
+            - button "Process steps" [ref=e95] [cursor=pointer]:
+              - img [ref=e96]:
+                - img
+              - generic [ref=e97]: Process steps
+            - button "Organisation functions" [ref=e98] [cursor=pointer]:
+              - img [ref=e99]:
+                - img
+              - generic [ref=e100]: Organisation functions
+            - button "KSF's - Opportunities" [ref=e101] [cursor=pointer]:
+              - img [ref=e102]:
+                - img
+              - generic [ref=e103]: KSF's - Opportunities
+            - button "Stakeholders" [ref=e104] [cursor=pointer]:
+              - img [ref=e105]:
+                - img
+              - generic [ref=e106]: Stakeholders
+            - button "Causes" [ref=e107] [cursor=pointer]:
+              - img [ref=e108]:
+                - img
+              - generic [ref=e109]: Causes
+            - button "Risks" [ref=e110] [cursor=pointer]:
+              - img [ref=e111]:
+                - img
+              - generic [ref=e112]: Risks
+            - button "Effects" [ref=e113] [cursor=pointer]:
+              - img [ref=e114]:
+                - img
+              - generic [ref=e115]: Effects
+            - button "Opportunities" [ref=e116] [cursor=pointer]:
+              - img [ref=e117]:
+                - img
+              - generic [ref=e118]: Opportunities
+            - button "Standards Frameworks" [ref=e119] [cursor=pointer]:
+              - img [ref=e120]:
+                - img
+              - generic [ref=e121]: Standards Frameworks
+            - button "Laws and regulations" [ref=e122] [cursor=pointer]:
+              - img [ref=e123]:
+                - img
+              - generic [ref=e124]: Laws and regulations
+            - button "Measures" [ref=e125] [cursor=pointer]:
+              - img [ref=e126]:
+                - img
+              - generic [ref=e127]: Measures
+            - button "Assets" [ref=e128] [cursor=pointer]:
+              - img [ref=e129]:
+                - img
+              - generic [ref=e130]: Assets
+            - button "Information systems" [ref=e131] [cursor=pointer]:
+              - img [ref=e132]:
+                - img
+              - generic [ref=e133]: Information systems
+            - button "Processing" [ref=e134] [cursor=pointer]:
+              - img [ref=e135]:
+                - img
+              - generic [ref=e136]: Processing
+            - button "Audits" [ref=e137] [cursor=pointer]:
+              - img [ref=e138]:
+                - img
+              - generic [ref=e139]: Audits
+            - button "Audit sets" [ref=e140] [cursor=pointer]:
+              - img [ref=e141]:
+                - img
+              - generic [ref=e142]: Audit sets
+            - button "Impact Assessments" [ref=e143] [cursor=pointer]:
+              - img [ref=e144]:
+                - img
+              - generic [ref=e145]: Impact Assessments
+            - button "Tests" [ref=e146] [cursor=pointer]:
+              - img [ref=e147]:
+                - img
+              - generic [ref=e148]: Tests
+            - button "Findings" [ref=e149] [cursor=pointer]:
+              - img [ref=e150]:
+                - img
+              - generic [ref=e151]: Findings
+            - button "Problems" [ref=e152] [cursor=pointer]:
+              - img [ref=e153]:
+                - img
+              - generic [ref=e154]: Problems
+            - button "Changes" [ref=e155] [cursor=pointer]:
+              - img [ref=e156]:
+                - img
+              - generic [ref=e157]: Changes
+            - button "Cases" [ref=e158] [cursor=pointer]:
+              - img [ref=e159]:
+                - img
+              - generic [ref=e160]: Cases
+          - button "build Maintain keyboard_arrow_down" [ref=e161] [cursor=pointer]:
+            - generic [ref=e162]: build
+            - generic [ref=e163]: Maintain
+            - generic [ref=e164]: keyboard_arrow_down
+          - list [ref=e165]:
+            - button "assignment_turned_in Questionnaires, forms" [active] [ref=e166] [cursor=pointer]:
+              - generic [ref=e167]: assignment_turned_in
+              - generic [ref=e168]: Questionnaires, forms
+            - button "Workflows & conditions" [ref=e169] [cursor=pointer]:
+              - img [ref=e170]:
+                - img
+              - generic [ref=e171]: Workflows & conditions
+    - generic [ref=e175]:
+      - generic [ref=e180]:
+        - button [ref=e181] [cursor=pointer]:
+          - img [ref=e183]: build
+        - button [ref=e184] [cursor=pointer]:
+          - img [ref=e186]: settings
+      - generic [ref=e189]:
+        - img [ref=e191]
+        - generic [ref=e192]: There are no Dashboards yet!
+  - iframe [ref=e194]:
+    - generic [active]:
+      - generic:
+        - text:  
+        - button "Open chat" [ref=f6e1] [cursor=pointer]
+  - generic:
+    - tooltip "Notifications"
+```
+
+# Test source
+
+```ts
+  1   | import { Locator, Page, expect } from '@playwright/test';
+  2   | 
+  3   | export class UIActions {
+  4   |   constructor(private page: Page) { }
+  5   | 
+  6   |   async click(element: Locator) {
+> 7   |     await expect(element).toBeVisible();
+      |                           ^ Error: expect(locator).toBeVisible() failed
+  8   |     await expect(element).toBeEnabled();
+  9   |     await element.click();
+  10  |   }
+  11  | 
+  12  |   async doubleClick(element: Locator) {
+  13  |     await expect(element).toBeVisible();
+  14  |     await element.dblclick();
+  15  |   }
+  16  | 
+  17  |   async rightClick(element: Locator) {
+  18  |     await expect(element).toBeVisible();
+  19  |     await element.click({ button: 'right' });
+  20  |   }
+  21  | 
+  22  |   async hover(element: Locator) {
+  23  |     await expect(element).toBeVisible();
+  24  |     await element.hover();
+  25  |   }
+  26  | 
+  27  |   async type(element: Locator, value: string) {
+  28  |     await expect(element).toBeVisible();
+  29  |     await expect(element).toBeEnabled();
+  30  |     await element.clear();
+  31  |     await element.fill(value);
+  32  |     await expect(element).toHaveValue(value);
+  33  |   }
+  34  | 
+  35  |   async typeWithoutClearing(element: Locator, value: string) {
+  36  |     await expect(element).toBeEnabled();
+  37  |     await element.type(value);
+  38  | 
+  39  |     const currentValue = await element.inputValue();
+  40  |     expect(currentValue).toContain(value);
+  41  |   }
+  42  | 
+  43  |   async clear(element: Locator) {
+  44  |     await expect(element).toBeEnabled();
+  45  |     await element.clear();
+  46  |     await expect(element).toHaveValue('');
+  47  |   }
+  48  | 
+  49  |   async check(element: Locator) {
+  50  |     // await expect(element).toBeVisible();
+  51  |     await element.check();
+  52  |     await expect(element).toBeChecked();
+  53  |   }
+  54  | 
+  55  |   async uncheck(element: Locator) {
+  56  |     await expect(element).toBeVisible();
+  57  |     await element.uncheck();
+  58  |     await expect(element).not.toBeChecked();
+  59  |   }
+  60  | 
+  61  |   async selectByValue(element: Locator, value: string) {
+  62  |     await element.selectOption(value);
+  63  |     await expect(element).toHaveValue(value);
+  64  |   }
+  65  | 
+  66  |   async selectByLabel(element: Locator, label: string) {
+  67  |     await element.selectOption({ label });
+  68  |   }
+  69  | 
+  70  |   async getText(element: Locator): Promise<string> {
+  71  |     await expect(element).toBeVisible();
+  72  |     return (await element.textContent()) ?? '';
+  73  |   }
+  74  | 
+  75  |   async verifyText(element: Locator, expected: string) {
+  76  |     await expect(element).toHaveText(expected);
+  77  |   }
+  78  | 
+  79  |   async verifyContainsText(element: Locator, partial: string) {
+  80  |     await expect(element).toContainText(partial);
+  81  |   }
+  82  | 
+  83  |   async verifyValue(element: Locator, expected: string) {
+  84  |     await expect(element).toHaveValue(expected);
+  85  |   }
+  86  | 
+  87  |   async verifyCount(element: Locator, expected: number) {
+  88  |     await expect(element).toHaveCount(expected);
+  89  |   }
+  90  | 
+  91  |   async verifyAttribute(element: Locator, attributeName: string, expected: string) {
+  92  |     await expect(element).toHaveAttribute(attributeName, expected);
+  93  |   }
+  94  | 
+  95  |   async verifyChecked(element: Locator) {
+  96  |     await expect(element).toBeChecked();
+  97  |   }
+  98  | 
+  99  |   async verifyNotChecked(element: Locator) {
+  100 |     await expect(element).not.toBeChecked();
+  101 |   }
+  102 | 
+  103 |   async verifyAttached(element: Locator) {
+  104 |     await expect(element).toBeAttached();
+  105 |   }
+  106 | 
+  107 |   async verifyVisible(element: Locator) {
+```
