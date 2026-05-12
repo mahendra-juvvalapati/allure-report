@@ -1,0 +1,630 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: E2E_Tests/FC005_questionnaire.spec.ts >> FC_005_Questionnaire Flow >> Configure questionnaire with 'External user can finish the questionnaire' and verify 'Lock' action is executed when Question condition is triggered on 'Change a question' and check Questionnaire 'Set version result state to' action
+- Location: tests/E2E_Tests/FC005_questionnaire.spec.ts:31:9
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('i').filter({ hasText: 'close' }).last()
+    - locator resolved to <i role="img" aria-hidden="true" class="q-icon notranslate material-icons">close</i>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div tabindex="-1" aria-hidden="true" class="q-dialog__backdrop fixed-full q-transition--fade-enter-from q-transition--fade-enter-active"></div> from <div class="fic-pluto" id="q-portal--dialog--65">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div tabindex="-1" aria-hidden="true" class="q-dialog__backdrop fixed-full q-transition--fade-enter-active q-transition--fade-enter-to"></div> from <div class="fic-pluto" id="q-portal--dialog--65">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <img src="/images/Cancel.svg"/> from <div class="fic-pluto" id="q-portal--dialog--65">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    4 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <img src="/images/Cancel.svg"/> from <div class="fic-pluto" id="q-portal--dialog--65">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <i role="img" aria-hidden="true" class="q-icon notranslate material-icons">close</i> from <div class="fic-pluto" id="q-portal--dialog--65">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <img src="/images/Cancel.svg"/> from <div class="fic-pluto" id="q-portal--dialog--65">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <img src="/images/Cancel.svg"/> from <div class="fic-pluto" id="q-portal--dialog--65">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <img src="/images/Cancel.svg"/> from <div class="fic-pluto" id="q-portal--dialog--65">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - text: ×
+  - link "ticket or feedback" [ref=e2] [cursor=pointer]:
+    - /url: javascript:void(0)
+    - img "ticket or feedback" [ref=e3]
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e10]:
+        - button "leftMenuOpen" [ref=e11] [cursor=pointer]:
+          - img [ref=e12]
+        - generic [ref=e13]:
+          - img [ref=e17]
+          - heading "QualiTlabs Hyd" [level=2] [ref=e21]
+        - generic [ref=e25] [cursor=pointer]: search
+        - button "Turn off admin role" [ref=e26] [cursor=pointer]:
+          - img [ref=e27]:
+            - img
+        - button [ref=e29] [cursor=pointer]:
+          - img [ref=e31]:
+            - img [ref=e32]
+        - generic [ref=e37]:
+          - button [ref=e38] [cursor=pointer]:
+            - img [ref=e40]:
+              - img [ref=e41]
+          - status "8" [ref=e42]
+        - button "fullscreen" [ref=e43] [cursor=pointer]:
+          - generic [ref=e44]: fullscreen
+        - button "Open beamer" [ref=e45] [cursor=pointer]:
+          - img [ref=e46]:
+            - img
+          - generic [ref=e47]: "1"
+        - button "freshDesk" [ref=e48] [cursor=pointer]:
+          - generic [ref=e49]: info
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - img [ref=e52] [cursor=pointer]
+          - button "dehaze" [ref=e53] [cursor=pointer]:
+            - generic [ref=e54]: dehaze
+        - list [ref=e55]:
+          - generic [ref=e56]:
+            - button "profile pic" [ref=e57]
+            - generic [ref=e58]: mahendra j
+          - button "keyboard_arrow_down mahendra.juvvalapati@qualitlabs.com" [ref=e59] [cursor=pointer]:
+            - generic [ref=e60]: keyboard_arrow_down
+            - generic [ref=e61]: mahendra.juvvalapati@qualitlabs.com
+          - list [ref=e62]:
+            - button "account_box My Data" [ref=e63] [cursor=pointer]:
+              - generic [ref=e64]: account_box
+              - generic [ref=e65]: My Data
+            - button "settings Settings" [ref=e66] [cursor=pointer]:
+              - generic [ref=e67]: settings
+              - generic [ref=e68]: Settings
+            - button "exit_to_app Logout" [ref=e69] [cursor=pointer]:
+              - generic [ref=e70]: exit_to_app
+              - generic [ref=e71]: Logout
+        - list [ref=e73]:
+          - button "Add new user" [ref=e74] [cursor=pointer]:
+            - img [ref=e75]:
+              - img
+            - generic [ref=e76]: Add new user
+          - button "business Environments" [ref=e77] [cursor=pointer]:
+            - generic [ref=e78]: business
+            - generic [ref=e79]: Environments
+          - button "home Dashboard" [ref=e80] [cursor=pointer]:
+            - generic [ref=e81]: home
+            - generic [ref=e82]: Dashboard
+          - button "widgets Modules keyboard_arrow_down" [ref=e83] [cursor=pointer]:
+            - generic [ref=e84]: widgets
+            - generic [ref=e85]: Modules
+            - generic [ref=e86]: keyboard_arrow_down
+          - list [ref=e87]:
+            - button "Strategy" [ref=e88] [cursor=pointer]:
+              - img [ref=e89]:
+                - img
+              - generic [ref=e90]: Strategy
+            - button "Policy" [ref=e91] [cursor=pointer]:
+              - img [ref=e92]:
+                - img
+              - generic [ref=e93]: Policy
+            - button "Programs" [ref=e94] [cursor=pointer]:
+              - img [ref=e95]:
+                - img
+              - generic [ref=e96]: Programs
+            - button "projects" [ref=e97] [cursor=pointer]:
+              - img [ref=e98]:
+                - img
+              - generic [ref=e99]: projects
+            - button "Dialogues" [ref=e100] [cursor=pointer]:
+              - img [ref=e101]:
+                - img
+              - generic [ref=e102]: Dialogues
+            - button "Objectives" [ref=e103] [cursor=pointer]:
+              - img [ref=e104]:
+                - img
+              - generic [ref=e105]: Objectives
+            - button "Processes" [ref=e106] [cursor=pointer]:
+              - img [ref=e107]:
+                - img
+              - generic [ref=e108]: Processes
+            - button "Organisation functions" [ref=e109] [cursor=pointer]:
+              - img [ref=e110]:
+                - img
+              - generic [ref=e111]: Organisation functions
+            - button "KSF's - Opportunities" [ref=e112] [cursor=pointer]:
+              - img [ref=e113]:
+                - img
+              - generic [ref=e114]: KSF's - Opportunities
+            - button "Stakeholders" [ref=e115] [cursor=pointer]:
+              - img [ref=e116]:
+                - img
+              - generic [ref=e117]: Stakeholders
+            - button "Risks" [ref=e118] [cursor=pointer]:
+              - img [ref=e119]:
+                - img
+              - generic [ref=e120]: Risks
+            - button "Opportunities" [ref=e121] [cursor=pointer]:
+              - img [ref=e122]:
+                - img
+              - generic [ref=e123]: Opportunities
+            - button "Standards Frameworks" [ref=e124] [cursor=pointer]:
+              - img [ref=e125]:
+                - img
+              - generic [ref=e126]: Standards Frameworks
+            - button "Laws and regulations" [ref=e127] [cursor=pointer]:
+              - img [ref=e128]:
+                - img
+              - generic [ref=e129]: Laws and regulations
+            - button "Measures" [ref=e130] [cursor=pointer]:
+              - img [ref=e131]:
+                - img
+              - generic [ref=e132]: Measures
+            - button "Assets" [ref=e133] [cursor=pointer]:
+              - img [ref=e134]:
+                - img
+              - generic [ref=e135]: Assets
+            - button "Information systems" [ref=e136] [cursor=pointer]:
+              - img [ref=e137]:
+                - img
+              - generic [ref=e138]: Information systems
+            - button "Processing" [ref=e139] [cursor=pointer]:
+              - img [ref=e140]:
+                - img
+              - generic [ref=e141]: Processing
+            - button "Audits" [ref=e142] [cursor=pointer]:
+              - img [ref=e143]:
+                - img
+              - generic [ref=e144]: Audits
+            - button "Audit sets" [ref=e145] [cursor=pointer]:
+              - img [ref=e146]:
+                - img
+              - generic [ref=e147]: Audit sets
+            - button "Impact Assessments" [ref=e148] [cursor=pointer]:
+              - img [ref=e149]:
+                - img
+              - generic [ref=e150]: Impact Assessments
+            - button "Tests" [ref=e151] [cursor=pointer]:
+              - img [ref=e152]:
+                - img
+              - generic [ref=e153]: Tests
+            - button "Findings" [ref=e154] [cursor=pointer]:
+              - img [ref=e155]:
+                - img
+              - generic [ref=e156]: Findings
+            - button "Problems" [ref=e157] [cursor=pointer]:
+              - img [ref=e158]:
+                - img
+              - generic [ref=e159]: Problems
+            - button "Changes" [ref=e160] [cursor=pointer]:
+              - img [ref=e161]:
+                - img
+              - generic [ref=e162]: Changes
+            - button "Cases" [ref=e163] [cursor=pointer]:
+              - img [ref=e164]:
+                - img
+              - generic [ref=e165]: Cases
+            - button "Tasks" [ref=e166] [cursor=pointer]:
+              - img [ref=e167]:
+                - img
+              - generic [ref=e168]: Tasks
+            - button "Documents" [ref=e169] [cursor=pointer]:
+              - img [ref=e170]:
+                - img
+              - generic [ref=e171]: Documents
+            - button "News items" [ref=e172] [cursor=pointer]:
+              - img [ref=e173]:
+                - img
+              - generic [ref=e174]: News items
+            - button "Related parties" [ref=e175] [cursor=pointer]:
+              - img [ref=e176]:
+                - img
+              - generic [ref=e177]: Related parties
+            - button "Contracts" [ref=e178] [cursor=pointer]:
+              - img [ref=e179]:
+                - img
+              - generic [ref=e180]: Contracts
+            - button "Vendors" [ref=e181] [cursor=pointer]:
+              - img [ref=e182]:
+                - img
+              - generic [ref=e183]: Vendors
+            - button "Performance agreements" [ref=e184] [cursor=pointer]:
+              - img [ref=e185]:
+                - img
+              - generic [ref=e186]: Performance agreements
+            - button "Key Figures" [ref=e187] [cursor=pointer]:
+              - img [ref=e188]:
+                - img
+              - generic [ref=e189]: Key Figures
+            - button "Settings" [ref=e190] [cursor=pointer]:
+              - img [ref=e191]:
+                - img
+              - generic [ref=e192]: Settings
+            - button "Critical Business Scenarios" [ref=e193] [cursor=pointer]:
+              - img [ref=e194]:
+                - img
+              - generic [ref=e195]: Critical Business Scenarios
+            - button "BCM Plans" [ref=e196] [cursor=pointer]:
+              - img [ref=e197]:
+                - img
+              - generic [ref=e198]: BCM Plans
+            - button "Context analysis" [ref=e199] [cursor=pointer]:
+              - img [ref=e200]:
+                - img
+              - generic [ref=e201]: Context analysis
+            - button "Situations" [ref=e202] [cursor=pointer]:
+              - img [ref=e203]:
+                - img
+              - generic [ref=e204]: Situations
+    - generic [ref=e210]:
+      - generic [ref=e212]:
+        - generic [ref=e213]:
+          - generic [ref=e215]:
+            - generic [ref=e216] [cursor=pointer]:
+              - generic: apps
+              - generic:
+                - img
+            - list [ref=e217]:
+              - listitem [ref=e218]:
+                - generic [ref=e220]:
+                  - generic:
+                    - img
+                  - generic [ref=e221]: Risk
+          - 'button "version:No repeatplan - 1 Version name keyboard_arrow_down Executor: ALL" [ref=e224] [cursor=pointer]':
+            - generic [ref=e225]: version:No repeatplan - 1 Version name
+            - generic [ref=e226]: keyboard_arrow_down
+            - generic [ref=e227]: "Executor: ALL"
+          - button "settings" [ref=e229] [cursor=pointer]:
+            - img [ref=e230]: settings
+          - generic [ref=e231]:
+            - button "add mo to projects" [ref=e233] [cursor=pointer]:
+              - img [ref=e234]:
+                - img
+            - button [ref=e235] [cursor=pointer]:
+              - img [ref=e237]:
+                - img [ref=e238]
+        - text: ▼ ▼
+      - generic [ref=e239]:
+        - generic [ref=e241]:
+          - img [ref=e243]:
+            - img
+          - generic [ref=e244]:
+            - generic [ref=e246]: "Risk: Risk_1778595744226"
+            - button "Copy item" [ref=e248] [cursor=pointer]:
+              - img "copy item" [ref=e249]: file_copy
+            - button "Close current version and start new version" [ref=e250] [cursor=pointer]:
+              - img "quick-version" [ref=e251]:
+                - img
+            - generic [ref=e252]:
+              - button "previous item" [disabled] [ref=e253]:
+                - img "previous item" [ref=e254]:
+                  - img
+              - button "previous item" [disabled] [ref=e255]:
+                - img "previous item" [ref=e256]:
+                  - img
+        - generic [ref=e257]:
+          - img:
+            - img
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - button "Previous Page" [disabled] [ref=e261]:
+                - img [ref=e262]:
+                  - img
+              - button "Next Page" [ref=e263] [cursor=pointer]:
+                - img [ref=e264]:
+                  - img
+              - generic [ref=e265]:
+                - tablist "Use the left and right arrow keys to navigate between tabs" [ref=e266]:
+                  - tab "Gross risk" [ref=e267] [cursor=pointer]:
+                    - generic [ref=e269]: Gross risk
+                  - tab "Net risk" [ref=e270] [cursor=pointer]:
+                    - generic [ref=e272]: Net risk
+                  - tab "Bowtie" [ref=e273] [cursor=pointer]:
+                    - generic [ref=e275]: Bowtie
+                  - tab "Measures" [ref=e276] [cursor=pointer]:
+                    - generic [ref=e278]: Measures
+                  - tab "Kritieke Bedrijfsfuncties" [ref=e279] [cursor=pointer]:
+                    - generic [ref=e281]: Kritieke Bedrijfsfuncties
+                  - tab "Dialogue" [selected] [ref=e282]:
+                    - generic [ref=e284]: Dialogue
+                  - tab "Chat" [ref=e285] [cursor=pointer]:
+                    - generic [ref=e287]: Chat
+                  - tab "Information systems" [ref=e288] [cursor=pointer]:
+                    - generic [ref=e290]: Information systems
+                  - tab "Related" [ref=e291] [cursor=pointer]:
+                    - generic [ref=e293]: Related
+                  - tab "Tasks" [ref=e294] [cursor=pointer]:
+                    - generic [ref=e296]: Tasks
+                  - tab "Key Indicators" [ref=e297] [cursor=pointer]:
+                    - generic [ref=e299]: Key Indicators
+                  - tab "History" [ref=e300] [cursor=pointer]:
+                    - generic [ref=e302]: History
+                  - tab "mo data" [ref=e303] [cursor=pointer]:
+                    - generic [ref=e305]: mo data
+                  - tab "Documents" [ref=e306] [cursor=pointer]:
+                    - generic [ref=e308]: Documents
+                  - tab "Risks" [ref=e309] [cursor=pointer]:
+                    - generic [ref=e311]: Risks
+                - generic [ref=e313]:
+                  - generic [ref=e316] [cursor=pointer]: Gross risk
+                  - generic [ref=e319] [cursor=pointer]: Net risk
+                  - generic [ref=e322] [cursor=pointer]: Bowtie
+                  - generic [ref=e325] [cursor=pointer]: Measures
+                  - generic [ref=e328] [cursor=pointer]: Kritieke Bedrijfsfuncties
+                  - generic [ref=e331] [cursor=pointer]: Dialogue
+                  - generic [ref=e334] [cursor=pointer]: Chat
+                  - generic [ref=e337] [cursor=pointer]: Information systems
+                  - generic [ref=e340] [cursor=pointer]: Related
+                  - generic [ref=e343] [cursor=pointer]: Tasks
+                  - generic [ref=e346] [cursor=pointer]: Key Indicators
+                  - generic [ref=e349] [cursor=pointer]: History
+                  - generic [ref=e352] [cursor=pointer]: mo data
+                  - generic [ref=e355] [cursor=pointer]: Documents
+                  - generic [ref=e358] [cursor=pointer]: Risks
+            - tabpanel "Dialogue" [ref=e360]:
+              - button "executer Questionnaire_1778595744226 Card image 100%" [ref=e370] [cursor=pointer]:
+                - generic [ref=e371]:
+                  - img "executer" [ref=e373]
+                  - generic "Questionnaire_1778595744226" [ref=e374]:
+                    - generic [ref=e375]: Questionnaire_1778595744226
+                - img "Card image" [ref=e377]
+                - generic [ref=e379]:
+                  - generic [ref=e381]: 100%
+                  - button [ref=e383]:
+                    - img
+  - iframe [ref=e385]:
+    - generic [active]:
+      - generic:
+        - text:  
+        - button "Open chat" [ref=f4e1] [cursor=pointer]
+  - generic:
+    - dialog:
+      - generic [ref=e393]:
+        - banner [ref=e394]:
+          - generic [ref=e396]:
+            - listitem [ref=e397]:
+              - generic [ref=e399]: Questionnaire_1778595744226
+              - generic [ref=e400]:
+                - button [ref=e402] [cursor=pointer]:
+                  - img [ref=e404]:
+                    - img [ref=e405]
+                - button [ref=e407] [cursor=pointer]:
+                  - img [ref=e409]: mail
+                - button [ref=e411] [cursor=pointer]:
+                  - img [ref=e413]: close
+            - listitem [ref=e414]:
+              - button [ref=e416] [cursor=pointer]:
+                - img [ref=e418]: keyboard_arrow_left
+              - generic [ref=e420]: check
+              - generic [ref=e425] [cursor=pointer]:
+                - generic [ref=e426]:
+                  - generic [ref=e427]:
+                    - generic [ref=e428]: (2-2) Page name 2
+                    - combobox "(2-2) Page name 2 Go to page" [ref=e429]: Page name 2
+                  - generic:
+                    - generic: Go to page
+                - generic [ref=e431]: arrow_drop_down
+              - generic [ref=e433]: "|"
+        - main [ref=e435]:
+          - generic [ref=e438]:
+            - generic [ref=e439]:
+              - generic [ref=e441]: "Risk : Risk_1778595744226"
+              - generic [ref=e443]: Page name 2
+            - listitem [ref=e449]:
+              - generic [ref=e453]:
+                - generic [ref=e457]: Not Mandatory Question
+                - textbox [ref=e463]:
+                  - /placeholder: Enter answer here
+                - generic [ref=e464] [cursor=pointer]: keyboard_arrow_down
+        - contentinfo [ref=e465]:
+          - generic [ref=e467]:
+            - button "Previous" [ref=e469] [cursor=pointer]:
+              - generic [ref=e470]:
+                - img [ref=e471]: keyboard_arrow_left
+                - generic [ref=e472]: Previous
+            - generic [ref=e473]:
+              - button "Completed" [disabled]:
+                - generic:
+                  - img: check
+                  - generic: Completed
+              - button "Finish" [ref=e474] [cursor=pointer]:
+                - generic [ref=e475]:
+                  - img [ref=e476]: check
+                  - generic [ref=e477]: Finish
+        - complementary [ref=e478]
+  - generic:
+    - dialog:
+      - generic [ref=e480]:
+        - progressbar [ref=e482]
+        - generic [ref=e485]:
+          - generic [ref=e486]:
+            - generic [ref=e487]: Message
+            - img [ref=e489]
+            - button [ref=e490] [cursor=pointer]:
+              - img [ref=e492]: close
+          - separator [ref=e493]
+          - generic [ref=e494]: This is the last page of the questionnaire. Not all pages are completed. Do you want to finish the questionnaire and complete all pages?
+        - generic [ref=e497]:
+          - button "No" [ref=e498] [cursor=pointer]:
+            - generic [ref=e500]: "No"
+          - button "Yes" [ref=e501] [cursor=pointer]:
+            - generic [ref=e503]: "Yes"
+  - generic:
+    - dialog:
+      - generic [ref=e505]:
+        - generic [ref=e506]:
+          - generic [ref=e507]:
+            - generic [ref=e508]: Error
+            - img [ref=e510]
+            - button [ref=e511] [cursor=pointer]:
+              - img [ref=e513]: close
+          - separator [ref=e514]
+          - generic [ref=e516]: Internal server error
+        - button "Ok" [ref=e519] [cursor=pointer]:
+          - generic [ref=e521]: Ok
+```
+
+# Test source
+
+```ts
+  1   | import { Locator, Page, expect } from '@playwright/test';
+  2   | import fs from 'fs';
+  3   | 
+  4   | export class UIActions {
+  5   |   constructor(private page: Page) { }
+  6   | 
+  7   |   async click(element: Locator) {
+  8   |     await expect(element).toBeVisible();
+  9   |     await expect(element).toBeEnabled();
+> 10  |     await element.click();
+      |                   ^ TimeoutError: locator.click: Timeout 15000ms exceeded.
+  11  |   }
+  12  | 
+  13  |   async doubleClick(element: Locator) {
+  14  |     await expect(element).toBeVisible();
+  15  |     await element.dblclick();
+  16  |   }
+  17  | 
+  18  |   async rightClick(element: Locator) {
+  19  |     await expect(element).toBeVisible();
+  20  |     await element.click({ button: 'right' });
+  21  |   }
+  22  | 
+  23  |   async hover(element: Locator) {
+  24  |     await expect(element).toBeVisible();
+  25  |     await element.hover();
+  26  |   }
+  27  | 
+  28  |   async type(element: Locator, value: string) {
+  29  |     await expect(element).toBeVisible();
+  30  |     await expect(element).toBeEnabled();
+  31  |     await element.clear();
+  32  |     await element.fill(value);
+  33  |     await expect(element).toHaveValue(value);
+  34  |   }
+  35  | 
+  36  |   async typeWithoutClearing(element: Locator, value: string) {
+  37  |     await expect(element).toBeEnabled();
+  38  |     await element.type(value);
+  39  | 
+  40  |     const currentValue = await element.inputValue();
+  41  |     expect(currentValue).toContain(value);
+  42  |   }
+  43  | 
+  44  |   async clear(element: Locator) {
+  45  |     await expect(element).toBeEnabled();
+  46  |     await element.clear();
+  47  |     await expect(element).toHaveValue('');
+  48  |   }
+  49  | 
+  50  |   async check(element: Locator) {
+  51  |     // await expect(element).toBeVisible();
+  52  |     await element.check();
+  53  |     await expect(element).toBeChecked();
+  54  |   }
+  55  | 
+  56  |   async uncheck(element: Locator) {
+  57  |     await expect(element).toBeVisible();
+  58  |     await element.uncheck();
+  59  |     await expect(element).not.toBeChecked();
+  60  |   }
+  61  | 
+  62  |   async selectByValue(element: Locator, value: string) {
+  63  |     await element.selectOption(value);
+  64  |     await expect(element).toHaveValue(value);
+  65  |   }
+  66  | 
+  67  |   async selectByLabel(element: Locator, label: string) {
+  68  |     await element.selectOption({ label });
+  69  |   }
+  70  | 
+  71  |   async getText(element: Locator): Promise<string> {
+  72  |     await expect(element).toBeVisible();
+  73  |     return (await element.textContent()) ?? '';
+  74  |   }
+  75  | 
+  76  |   async verifyText(element: Locator, expected: string) {
+  77  |     await expect(element).toHaveText(expected);
+  78  |   }
+  79  | 
+  80  |   async verifyContainsText(element: Locator, partial: string) {
+  81  |     await expect(element).toContainText(partial);
+  82  |   }
+  83  | 
+  84  |   async verifyValue(element: Locator, expected: string) {
+  85  |     await expect(element).toHaveValue(expected);
+  86  |   }
+  87  | 
+  88  |   async verifyCount(element: Locator, expected: number) {
+  89  |     await expect(element).toHaveCount(expected);
+  90  |   }
+  91  | 
+  92  |   async verifyAttribute(element: Locator, attributeName: string, expected: string) {
+  93  |     await expect(element).toHaveAttribute(attributeName, expected);
+  94  |   }
+  95  | 
+  96  |   async verifyChecked(element: Locator) {
+  97  |     await expect(element).toBeChecked();
+  98  |   }
+  99  | 
+  100 |   async verifyNotChecked(element: Locator) {
+  101 |     await expect(element).not.toBeChecked();
+  102 |   }
+  103 | 
+  104 |   async verifyAttached(element: Locator) {
+  105 |     await expect(element).toBeAttached();
+  106 |   }
+  107 | 
+  108 |   async verifyVisible(element: Locator) {
+  109 |     await expect(element).toBeVisible();
+  110 |   }
+```
