@@ -1,0 +1,1163 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: questionCondition.spec.ts >> Question Condition Tests >> TC_QC_032-Verify 'Send Data To Service' action can be created successfully in question conditions
+- Location: tests/questionCondition.spec.ts:306:9
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('option', { name: 'Test', exact: true })
+Expected: visible
+Timeout: 15000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 15000ms
+  - waiting for getByRole('option', { name: 'Test', exact: true })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - text: ×
+  - link "ticket or feedback" [ref=e2] [cursor=pointer]:
+    - /url: javascript:void(0)
+    - img "ticket or feedback" [ref=e3]
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e10]:
+        - button "leftMenuOpen" [ref=e11] [cursor=pointer]:
+          - img [ref=e12]
+        - img [ref=e17]
+        - button "Turn off admin role" [ref=e20] [cursor=pointer]:
+          - img [ref=e21]:
+            - img
+        - button [ref=e23] [cursor=pointer]:
+          - img [ref=e25]:
+            - img [ref=e26]
+        - generic [ref=e31]:
+          - button [ref=e32] [cursor=pointer]:
+            - img [ref=e34]:
+              - img [ref=e35]
+          - status "76" [ref=e36]
+        - button "fullscreen" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: fullscreen
+        - button "Open beamer" [ref=e39] [cursor=pointer]:
+          - img [ref=e40]:
+            - img
+          - generic [ref=e41]: "1"
+        - button "freshDesk" [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]: info
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - img [ref=e46] [cursor=pointer]
+          - button "dehaze" [ref=e47] [cursor=pointer]:
+            - generic [ref=e48]: dehaze
+        - list [ref=e49]:
+          - generic [ref=e50]:
+            - button "profile pic" [ref=e51]
+            - generic [ref=e52]: mahendra j
+          - button "keyboard_arrow_down mahendra.juvvalapati@qualitlabs.com" [ref=e53] [cursor=pointer]:
+            - generic [ref=e54]: keyboard_arrow_down
+            - generic [ref=e55]: mahendra.juvvalapati@qualitlabs.com
+          - list [ref=e56]:
+            - button "exit_to_app Logout" [ref=e57] [cursor=pointer]:
+              - generic [ref=e58]: exit_to_app
+              - generic [ref=e59]: Logout
+        - list [ref=e61]:
+          - button "home Dashboard" [ref=e62] [cursor=pointer]:
+            - generic [ref=e63]: home
+            - generic [ref=e64]: Dashboard
+          - button "widgets Modules keyboard_arrow_down" [ref=e65] [cursor=pointer]:
+            - generic [ref=e66]: widgets
+            - generic [ref=e67]: Modules
+            - generic [ref=e68]: keyboard_arrow_down
+          - list [ref=e69]:
+            - button "Strategy" [ref=e70] [cursor=pointer]:
+              - img [ref=e71]:
+                - img
+              - generic [ref=e72]: Strategy
+            - button "Policy" [ref=e73] [cursor=pointer]:
+              - img [ref=e74]:
+                - img
+              - generic [ref=e75]: Policy
+            - button "Programs" [ref=e76] [cursor=pointer]:
+              - img [ref=e77]:
+                - img
+              - generic [ref=e78]: Programs
+            - button "projects" [ref=e79] [cursor=pointer]:
+              - img [ref=e80]:
+                - img
+              - generic [ref=e81]: projects
+            - button "Dialogues" [ref=e82] [cursor=pointer]:
+              - img [ref=e83]:
+                - img
+              - generic [ref=e84]: Dialogues
+            - button "Objectives" [ref=e85] [cursor=pointer]:
+              - img [ref=e86]:
+                - img
+              - generic [ref=e87]: Objectives
+            - button "Processes" [ref=e88] [cursor=pointer]:
+              - img [ref=e89]:
+                - img
+              - generic [ref=e90]: Processes
+            - button "Process steps" [ref=e91] [cursor=pointer]:
+              - img [ref=e92]:
+                - img
+              - generic [ref=e93]: Process steps
+            - button "Organisation functions" [ref=e94] [cursor=pointer]:
+              - img [ref=e95]:
+                - img
+              - generic [ref=e96]: Organisation functions
+            - button "KSF's - Opportunities" [ref=e97] [cursor=pointer]:
+              - img [ref=e98]:
+                - img
+              - generic [ref=e99]: KSF's - Opportunities
+            - button "Stakeholders" [ref=e100] [cursor=pointer]:
+              - img [ref=e101]:
+                - img
+              - generic [ref=e102]: Stakeholders
+            - button "Causes" [ref=e103] [cursor=pointer]:
+              - img [ref=e104]:
+                - img
+              - generic [ref=e105]: Causes
+            - button "Risks" [ref=e106] [cursor=pointer]:
+              - img [ref=e107]:
+                - img
+              - generic [ref=e108]: Risks
+            - button "Effects" [ref=e109] [cursor=pointer]:
+              - img [ref=e110]:
+                - img
+              - generic [ref=e111]: Effects
+            - button "Opportunities" [ref=e112] [cursor=pointer]:
+              - img [ref=e113]:
+                - img
+              - generic [ref=e114]: Opportunities
+            - button "Standards Frameworks" [ref=e115] [cursor=pointer]:
+              - img [ref=e116]:
+                - img
+              - generic [ref=e117]: Standards Frameworks
+            - button "Laws and regulations" [ref=e118] [cursor=pointer]:
+              - img [ref=e119]:
+                - img
+              - generic [ref=e120]: Laws and regulations
+            - button "Measures" [ref=e121] [cursor=pointer]:
+              - img [ref=e122]:
+                - img
+              - generic [ref=e123]: Measures
+            - button "Assets" [ref=e124] [cursor=pointer]:
+              - img [ref=e125]:
+                - img
+              - generic [ref=e126]: Assets
+            - button "Information systems" [ref=e127] [cursor=pointer]:
+              - img [ref=e128]:
+                - img
+              - generic [ref=e129]: Information systems
+            - button "Processing" [ref=e130] [cursor=pointer]:
+              - img [ref=e131]:
+                - img
+              - generic [ref=e132]: Processing
+            - button "Audits" [ref=e133] [cursor=pointer]:
+              - img [ref=e134]:
+                - img
+              - generic [ref=e135]: Audits
+            - button "Audit sets" [ref=e136] [cursor=pointer]:
+              - img [ref=e137]:
+                - img
+              - generic [ref=e138]: Audit sets
+            - button "Impact Assessments" [ref=e139] [cursor=pointer]:
+              - img [ref=e140]:
+                - img
+              - generic [ref=e141]: Impact Assessments
+            - button "Tests" [ref=e142] [cursor=pointer]:
+              - img [ref=e143]:
+                - img
+              - generic [ref=e144]: Tests
+            - button "Findings" [ref=e145] [cursor=pointer]:
+              - img [ref=e146]:
+                - img
+              - generic [ref=e147]: Findings
+            - button "Problems" [ref=e148] [cursor=pointer]:
+              - img [ref=e149]:
+                - img
+              - generic [ref=e150]: Problems
+            - button "Changes" [ref=e151] [cursor=pointer]:
+              - img [ref=e152]:
+                - img
+              - generic [ref=e153]: Changes
+            - button "Cases" [ref=e154] [cursor=pointer]:
+              - img [ref=e155]:
+                - img
+              - generic [ref=e156]: Cases
+            - button "Tasks" [ref=e157] [cursor=pointer]:
+              - img [ref=e158]:
+                - img
+              - generic [ref=e159]: Tasks
+            - button "Documents" [ref=e160] [cursor=pointer]:
+              - img [ref=e161]:
+                - img
+              - generic [ref=e162]: Documents
+            - button "News items" [ref=e163] [cursor=pointer]:
+              - img [ref=e164]:
+                - img
+              - generic [ref=e165]: News items
+            - button "Related parties" [ref=e166] [cursor=pointer]:
+              - img [ref=e167]:
+                - img
+              - generic [ref=e168]: Related parties
+            - button "Contracts" [ref=e169] [cursor=pointer]:
+              - img [ref=e170]:
+                - img
+              - generic [ref=e171]: Contracts
+            - button "Vendors" [ref=e172] [cursor=pointer]:
+              - img [ref=e173]:
+                - img
+              - generic [ref=e174]: Vendors
+            - button "Performance agreements" [ref=e175] [cursor=pointer]:
+              - img [ref=e176]:
+                - img
+              - generic [ref=e177]: Performance agreements
+            - button "Key Figures" [ref=e178] [cursor=pointer]:
+              - img [ref=e179]:
+                - img
+              - generic [ref=e180]: Key Figures
+            - button "Settings" [ref=e181] [cursor=pointer]:
+              - img [ref=e182]:
+                - img
+              - generic [ref=e183]: Settings
+            - button "Critical Business Scenarios" [ref=e184] [cursor=pointer]:
+              - img [ref=e185]:
+                - img
+              - generic [ref=e186]: Critical Business Scenarios
+            - button "BCM Plans" [ref=e187] [cursor=pointer]:
+              - img [ref=e188]:
+                - img
+              - generic [ref=e189]: BCM Plans
+            - button "Context analysis" [ref=e190] [cursor=pointer]:
+              - img [ref=e191]:
+                - img
+              - generic [ref=e192]: Context analysis
+            - button "Situations" [ref=e193] [cursor=pointer]:
+              - img [ref=e194]:
+                - img
+              - generic [ref=e195]: Situations
+            - button "Planstappen" [ref=e196] [cursor=pointer]:
+              - img [ref=e197]:
+                - img
+              - generic [ref=e198]: Planstappen
+            - button "BOBOC logs" [ref=e199] [cursor=pointer]:
+              - img [ref=e200]:
+                - img
+              - generic [ref=e201]: BOBOC logs
+          - button "build Maintain keyboard_arrow_down" [ref=e202] [cursor=pointer]:
+            - generic [ref=e203]: build
+            - generic [ref=e204]: Maintain
+            - generic [ref=e205]: keyboard_arrow_down
+          - list [ref=e206]:
+            - button "assignment_turned_in Questionnaires, forms" [ref=e207] [cursor=pointer]:
+              - generic [ref=e208]: assignment_turned_in
+              - generic [ref=e209]: Questionnaires, forms
+            - button "Workflows & conditions" [ref=e210] [cursor=pointer]:
+              - img [ref=e211]:
+                - img
+              - generic [ref=e212]: Workflows & conditions
+    - generic [ref=e216]:
+      - generic [ref=e218]:
+        - generic [ref=e219]:
+          - generic [ref=e221]:
+            - button [ref=e223] [cursor=pointer]:
+              - img [ref=e225]: arrow_back
+            - generic [ref=e227]:
+              - generic [ref=e229] [cursor=pointer]: QualiTlabs
+              - generic [ref=e231]: keyboard_arrow_right
+              - generic [ref=e233] [cursor=pointer]: Templates
+              - generic [ref=e235]: keyboard_arrow_right
+              - generic [ref=e237] [cursor=pointer]: QA Automation
+              - generic [ref=e239]: keyboard_arrow_right
+              - generic [ref=e241] [cursor=pointer]: Questionnaires, forms
+          - generic [ref=e243]:
+            - button [ref=e244] [cursor=pointer]:
+              - img [ref=e246]: content_copy
+            - button "Publish" [ref=e247] [cursor=pointer]:
+              - generic [ref=e248]:
+                - img [ref=e249]: file_upload
+                - generic [ref=e250]: Publish
+            - button [ref=e251] [cursor=pointer]:
+              - img [ref=e253]: more_vert
+        - generic [ref=e254]: Questionnaire_1778783174977
+      - generic [ref=e256]:
+        - toolbar [ref=e258]:
+          - tablist [ref=e259]:
+            - generic [ref=e260]:
+              - tab "Settings" [ref=e261] [cursor=pointer]:
+                - generic [ref=e263]: Settings
+              - tab "Questionnaire" [ref=e265] [cursor=pointer]:
+                - generic [ref=e267]: Questionnaire
+              - tab "QUESTION CONDITIONS" [selected] [ref=e269] [cursor=pointer]:
+                - generic [ref=e271]: QUESTION CONDITIONS
+              - tab "QUESTIONNAIRE CONDITIONS" [ref=e273] [cursor=pointer]:
+                - generic [ref=e275]: QUESTIONNAIRE CONDITIONS
+              - tab "Indicators" [ref=e277] [cursor=pointer]:
+                - generic [ref=e279]: Indicators
+        - tabpanel [ref=e283]:
+          - tabpanel [ref=e284]:
+            - generic [ref=e289]:
+              - toolbar [ref=e291]:
+                - tablist [ref=e292]:
+                  - tab "RenamedTab" [selected] [ref=e294] [cursor=pointer]:
+                    - generic [ref=e296]: RenamedTab
+                - button "Add tab" [ref=e300] [cursor=pointer]:
+                  - generic [ref=e301]:
+                    - generic [ref=e302]: Add tab
+                    - img [ref=e303]: add_circle
+              - tabpanel [ref=e306]:
+                - tabpanel [ref=e307]:
+                  - generic [ref=e308]:
+                    - generic [ref=e310]:
+                      - generic [ref=e315]:
+                        - generic [ref=e317]: search
+                        - textbox [ref=e319]:
+                          - /placeholder: Type to Search
+                      - list [ref=e321]:
+                        - listitem [ref=e322]:
+                          - generic [ref=e324]: list
+                          - generic [ref=e326]: default
+                          - switch [checked] [ref=e329] [cursor=pointer]
+                        - listitem [ref=e333]:
+                          - generic [ref=e335]: list
+                          - generic [ref=e337]: condition1
+                          - switch [checked] [ref=e340] [cursor=pointer]
+                        - listitem [ref=e344]:
+                          - generic [ref=e346]: list
+                          - generic [ref=e348]: RenamedCondition
+                          - switch [checked] [ref=e351] [cursor=pointer]
+                    - generic [ref=e355]:
+                      - generic [ref=e356]:
+                        - generic [ref=e357]:
+                          - generic [ref=e358]:
+                            - generic [ref=e364]:
+                              - textbox "Condition Name *" [ref=e365]: RenamedCondition
+                              - generic: Condition Name *
+                            - generic: Enabled
+                            - button [ref=e367] [cursor=pointer]:
+                              - img [ref=e369]: delete
+                            - button [ref=e371] [cursor=pointer]:
+                              - img [ref=e373]: content_copy
+                          - generic [ref=e378]:
+                            - textbox "Condition Description" [ref=e379]
+                            - generic: Condition Description
+                          - generic [ref=e380]:
+                            - generic [ref=e384]:
+                              - generic [ref=e385]:
+                                - generic [ref=e386]:
+                                  - generic [ref=e387]: Change a question
+                                  - combobox "Change a question Trigger On" [ref=e388] [cursor=pointer]
+                                - generic:
+                                  - generic: Trigger On
+                              - generic [ref=e390]: arrow_drop_down
+                            - generic [ref=e391]:
+                              - generic [ref=e395]:
+                                - generic [ref=e396]:
+                                  - generic [ref=e397]:
+                                    - generic [ref=e398]: Page name 1
+                                    - combobox "Page name 1 Page" [ref=e399] [cursor=pointer]
+                                  - generic:
+                                    - generic: Page
+                                - generic [ref=e401]: arrow_drop_down
+                              - generic [ref=e406]:
+                                - generic [ref=e407]:
+                                  - generic [ref=e408]:
+                                    - generic [ref=e409]: What is your name?
+                                    - combobox "What is your name? Question" [ref=e410] [cursor=pointer]
+                                  - generic:
+                                    - generic: Question
+                                - generic [ref=e412]: arrow_drop_down
+                        - generic [ref=e413]:
+                          - generic [ref=e415]:
+                            - generic [ref=e417] [cursor=pointer]:
+                              - generic [ref=e418]:
+                                - generic [ref=e419]:
+                                  - generic [ref=e420]: RenamedTab
+                                  - combobox "RenamedTab Tab *" [ref=e421]: RenamedTab
+                                - generic:
+                                  - generic: Tab *
+                              - generic [ref=e423]: arrow_drop_down
+                            - button [ref=e425] [cursor=pointer]:
+                              - img [ref=e427]: edit
+                          - generic [ref=e432]:
+                            - textbox "Tab Description" [ref=e433]: This is a default tab
+                            - generic: Tab Description
+                      - generic [ref=e435]:
+                        - generic [ref=e438]:
+                          - generic [ref=e439]:
+                            - generic [ref=e440]: Meet
+                            - generic [ref=e445] [cursor=pointer]:
+                              - generic [ref=e447]:
+                                - generic [ref=e448]: ALL
+                                - combobox "ALL" [ref=e449]
+                              - generic [ref=e451]: arrow_drop_down
+                            - generic [ref=e452]: OF THE FOLLOWING CONDITIONS
+                          - button "Add condition" [ref=e454] [cursor=pointer]:
+                            - generic [ref=e455]:
+                              - generic [ref=e456]: Add condition
+                              - img [ref=e457]: add_circle
+                        - generic [ref=e458]:
+                          - generic [ref=e459]:
+                            - generic [ref=e464]:
+                              - generic [ref=e465]:
+                                - generic [ref=e466]:
+                                  - generic [ref=e467]: Question
+                                  - combobox "Question Condition On" [ref=e468] [cursor=pointer]
+                                - generic:
+                                  - generic: Condition On
+                              - generic [ref=e470]: arrow_drop_down
+                            - generic [ref=e475]:
+                              - generic [ref=e476]:
+                                - combobox "Page number" [ref=e478] [cursor=pointer]
+                                - generic:
+                                  - generic: Page number
+                              - generic [ref=e480]: arrow_drop_down
+                            - generic [ref=e485]:
+                              - generic [ref=e486]:
+                                - combobox "Where" [ref=e488] [cursor=pointer]
+                                - generic:
+                                  - generic: Where
+                              - generic [ref=e490]: arrow_drop_down
+                            - generic [ref=e495]:
+                              - generic [ref=e496]:
+                                - combobox "Operator" [ref=e498] [cursor=pointer]
+                                - generic:
+                                  - generic: Operator
+                              - generic [ref=e500]: arrow_drop_down
+                            - generic [ref=e506]:
+                              - generic [ref=e507]:
+                                - combobox "data" [ref=e509] [cursor=pointer]
+                                - generic:
+                                  - generic: data
+                              - generic [ref=e511]: arrow_drop_down
+                            - button [ref=e513] [cursor=pointer]:
+                              - img [ref=e515]: delete
+                          - generic [ref=e516]:
+                            - generic [ref=e521]:
+                              - generic [ref=e522]:
+                                - generic [ref=e523]:
+                                  - generic [ref=e524]: Question
+                                  - combobox "Question Condition On" [ref=e525] [cursor=pointer]
+                                - generic:
+                                  - generic: Condition On
+                              - generic [ref=e527]: arrow_drop_down
+                            - generic [ref=e532]:
+                              - generic [ref=e533]:
+                                - generic [ref=e534]:
+                                  - generic [ref=e535]: Page name 1
+                                  - combobox "Page name 1 Page number" [ref=e536] [cursor=pointer]
+                                - generic:
+                                  - generic: Page number
+                              - generic [ref=e538]: arrow_drop_down
+                            - generic [ref=e543]:
+                              - generic [ref=e544]:
+                                - generic [ref=e545]:
+                                  - generic [ref=e546]: What is your name?
+                                  - combobox "What is your name? Where" [ref=e547] [cursor=pointer]
+                                - generic:
+                                  - generic: Where
+                              - generic [ref=e549]: arrow_drop_down
+                            - generic [ref=e554]:
+                              - generic [ref=e555]:
+                                - generic [ref=e556]:
+                                  - generic [ref=e557]: =
+                                  - combobox "= Operator" [ref=e558] [cursor=pointer]
+                                - generic:
+                                  - generic: Operator
+                              - generic [ref=e560]: arrow_drop_down
+                            - generic [ref=e567]:
+                              - textbox "value" [ref=e568]: Mahendra
+                              - generic: value
+                            - button [ref=e570] [cursor=pointer]:
+                              - img [ref=e572]: delete
+                          - generic [ref=e573]:
+                            - generic [ref=e578]:
+                              - generic [ref=e579]:
+                                - generic [ref=e580]:
+                                  - generic [ref=e581]: Calculation
+                                  - combobox "Calculation Condition On" [ref=e582] [cursor=pointer]
+                                - generic:
+                                  - generic: Condition On
+                              - generic [ref=e584]: arrow_drop_down
+                            - generic [ref=e590]:
+                              - textbox "Calculation formula" [ref=e591]: 10*10
+                              - generic: Calculation formula
+                            - generic [ref=e596]:
+                              - generic [ref=e597]:
+                                - generic [ref=e598]:
+                                  - generic [ref=e599]: =
+                                  - combobox "= Operator" [ref=e600] [cursor=pointer]
+                                - generic:
+                                  - generic: Operator
+                              - generic [ref=e602]: arrow_drop_down
+                            - generic [ref=e609]:
+                              - textbox "value" [ref=e610]: "100"
+                              - generic: value
+                            - button [ref=e612] [cursor=pointer]:
+                              - img [ref=e614]: delete
+                          - generic [ref=e615]:
+                            - generic [ref=e620]:
+                              - generic [ref=e621]:
+                                - generic [ref=e622]:
+                                  - generic [ref=e623]: Variable
+                                  - combobox "Variable Condition On" [ref=e624] [cursor=pointer]
+                                - generic:
+                                  - generic: Condition On
+                              - generic [ref=e626]: arrow_drop_down
+                            - generic [ref=e631]:
+                              - generic [ref=e633] [cursor=pointer]: close
+                              - generic [ref=e634]:
+                                - combobox "Where" [ref=e635]: username
+                                - generic: Where
+                            - generic [ref=e640]:
+                              - generic [ref=e641]:
+                                - generic [ref=e642]:
+                                  - generic [ref=e643]: =
+                                  - combobox "= Operator" [ref=e644] [cursor=pointer]
+                                - generic:
+                                  - generic: Operator
+                              - generic [ref=e646]: arrow_drop_down
+                            - generic [ref=e653]:
+                              - textbox "value" [ref=e654]: Mahendra
+                              - generic: value
+                            - button [ref=e656] [cursor=pointer]:
+                              - img [ref=e658]: delete
+                      - generic [ref=e660]:
+                        - generic [ref=e663]:
+                          - generic [ref=e664]: ACTIONS WHEN CONDITION IS TRUE
+                          - button "Add action" [ref=e666] [cursor=pointer]:
+                            - generic [ref=e667]:
+                              - generic [ref=e668]: Add action
+                              - img [ref=e669]: add_circle
+                        - generic [ref=e670]:
+                          - generic [ref=e671]:
+                            - generic [ref=e676]:
+                              - generic [ref=e677]:
+                                - generic [ref=e678]:
+                                  - generic [ref=e679]: Enable
+                                  - combobox "Enable Action type" [ref=e680] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e682]: arrow_drop_down
+                            - generic [ref=e687]:
+                              - generic [ref=e688]:
+                                - generic [ref=e689]:
+                                  - generic [ref=e690]: Question
+                                  - combobox "Question Action On" [ref=e691] [cursor=pointer]
+                                - generic:
+                                  - generic: Action On
+                              - generic [ref=e693]: arrow_drop_down
+                            - generic [ref=e698]:
+                              - generic [ref=e699]:
+                                - combobox "Page number" [ref=e701] [cursor=pointer]
+                                - generic:
+                                  - generic: Page number
+                              - generic [ref=e703]: arrow_drop_down
+                            - generic [ref=e708]:
+                              - generic [ref=e709]:
+                                - combobox "Action field" [ref=e711] [cursor=pointer]
+                                - generic:
+                                  - generic: Action field
+                              - generic [ref=e713]: arrow_drop_down
+                            - checkbox "Irreversible" [ref=e715] [cursor=pointer]:
+                              - img [ref=e718]
+                              - generic [ref=e720]: Irreversible
+                            - button [ref=e722] [cursor=pointer]:
+                              - img [ref=e724]: delete
+                          - generic [ref=e725]:
+                            - generic [ref=e730]:
+                              - generic [ref=e731]:
+                                - generic [ref=e732]:
+                                  - generic [ref=e733]: Hide
+                                  - combobox "Hide Action type" [ref=e734] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e736]: arrow_drop_down
+                            - generic [ref=e741]:
+                              - generic [ref=e742]:
+                                - generic [ref=e743]:
+                                  - generic [ref=e744]: Page name 1
+                                  - combobox "Page name 1 Page number" [ref=e745] [cursor=pointer]
+                                - generic:
+                                  - generic: Page number
+                              - generic [ref=e747]: arrow_drop_down
+                            - generic [ref=e752]:
+                              - generic [ref=e753]:
+                                - generic [ref=e754]:
+                                  - generic [ref=e755]: What is your name?
+                                  - combobox "What is your name? Action field" [ref=e756] [cursor=pointer]
+                                - generic:
+                                  - generic: Action field
+                              - generic [ref=e758]: arrow_drop_down
+                            - checkbox "Irreversible" [checked] [ref=e760] [cursor=pointer]:
+                              - img [ref=e763]
+                              - generic [ref=e765]: Irreversible
+                            - button [ref=e767] [cursor=pointer]:
+                              - img [ref=e769]: delete
+                          - generic [ref=e770]:
+                            - generic [ref=e775]:
+                              - generic [ref=e776]:
+                                - generic [ref=e777]:
+                                  - generic [ref=e778]: Show
+                                  - combobox "Show Action type" [ref=e779] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e781]: arrow_drop_down
+                            - generic [ref=e786]:
+                              - generic [ref=e787]:
+                                - generic [ref=e788]:
+                                  - generic [ref=e789]: Page name 1
+                                  - combobox "Page name 1 Page number" [ref=e790] [cursor=pointer]
+                                - generic:
+                                  - generic: Page number
+                              - generic [ref=e792]: arrow_drop_down
+                            - generic [ref=e797]:
+                              - generic [ref=e798]:
+                                - generic [ref=e799]:
+                                  - generic [ref=e800]: What is your name?
+                                  - combobox "What is your name? Action field" [ref=e801] [cursor=pointer]
+                                - generic:
+                                  - generic: Action field
+                              - generic [ref=e803]: arrow_drop_down
+                            - checkbox "Irreversible" [checked] [ref=e805] [cursor=pointer]:
+                              - img [ref=e808]
+                              - generic [ref=e810]: Irreversible
+                            - button [ref=e812] [cursor=pointer]:
+                              - img [ref=e814]: delete
+                          - generic [ref=e815]:
+                            - generic [ref=e820]:
+                              - generic [ref=e821]:
+                                - generic [ref=e822]:
+                                  - generic [ref=e823]: Lock
+                                  - combobox "Lock Action type" [ref=e824] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e826]: arrow_drop_down
+                            - generic [ref=e831]:
+                              - generic [ref=e832]:
+                                - generic [ref=e833]:
+                                  - generic [ref=e834]: Page name 1
+                                  - combobox "Page name 1 Page number" [ref=e835] [cursor=pointer]
+                                - generic:
+                                  - generic: Page number
+                              - generic [ref=e837]: arrow_drop_down
+                            - generic [ref=e842]:
+                              - generic [ref=e843]:
+                                - generic [ref=e844]:
+                                  - generic [ref=e845]: What is your name?
+                                  - combobox "What is your name? Action field" [ref=e846] [cursor=pointer]
+                                - generic:
+                                  - generic: Action field
+                              - generic [ref=e848]: arrow_drop_down
+                            - checkbox "Irreversible" [checked] [ref=e850] [cursor=pointer]:
+                              - img [ref=e853]
+                              - generic [ref=e855]: Irreversible
+                            - button [ref=e857] [cursor=pointer]:
+                              - img [ref=e859]: delete
+                          - generic [ref=e860]:
+                            - generic [ref=e865]:
+                              - generic [ref=e866]:
+                                - generic [ref=e867]:
+                                  - generic [ref=e868]: Unlock
+                                  - combobox "Unlock Action type" [ref=e869] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e871]: arrow_drop_down
+                            - generic [ref=e876]:
+                              - generic [ref=e877]:
+                                - generic [ref=e878]:
+                                  - generic [ref=e879]: Page name 1
+                                  - combobox "Page name 1 Page number" [ref=e880] [cursor=pointer]
+                                - generic:
+                                  - generic: Page number
+                              - generic [ref=e882]: arrow_drop_down
+                            - generic [ref=e887]:
+                              - generic [ref=e888]:
+                                - generic [ref=e889]:
+                                  - generic [ref=e890]: What is your name?
+                                  - combobox "What is your name? Action field" [ref=e891] [cursor=pointer]
+                                - generic:
+                                  - generic: Action field
+                              - generic [ref=e893]: arrow_drop_down
+                            - checkbox "Irreversible" [checked] [ref=e895] [cursor=pointer]:
+                              - img [ref=e898]
+                              - generic [ref=e900]: Irreversible
+                            - button [ref=e902] [cursor=pointer]:
+                              - img [ref=e904]: delete
+                          - generic [ref=e905]:
+                            - generic [ref=e910]:
+                              - generic [ref=e911]:
+                                - generic [ref=e912]:
+                                  - generic [ref=e913]: Enable
+                                  - combobox "Enable Action type" [ref=e914] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e916]: arrow_drop_down
+                            - generic [ref=e921]:
+                              - generic [ref=e922]:
+                                - generic [ref=e923]:
+                                  - generic [ref=e924]: Question
+                                  - combobox "Question Action On" [ref=e925] [cursor=pointer]
+                                - generic:
+                                  - generic: Action On
+                              - generic [ref=e927]: arrow_drop_down
+                            - generic [ref=e932]:
+                              - generic [ref=e933]:
+                                - generic [ref=e934]:
+                                  - generic [ref=e935]: Page name 1
+                                  - combobox "Page name 1 Page number" [ref=e936] [cursor=pointer]
+                                - generic:
+                                  - generic: Page number
+                              - generic [ref=e938]: arrow_drop_down
+                            - generic [ref=e943]:
+                              - generic [ref=e944]:
+                                - generic [ref=e945]:
+                                  - generic [ref=e946]: What is your name?
+                                  - combobox "What is your name? Action field" [ref=e947] [cursor=pointer]
+                                - generic:
+                                  - generic: Action field
+                              - generic [ref=e949]: arrow_drop_down
+                            - checkbox "Irreversible" [checked] [ref=e951] [cursor=pointer]:
+                              - img [ref=e954]
+                              - generic [ref=e956]: Irreversible
+                            - button [ref=e958] [cursor=pointer]:
+                              - img [ref=e960]: delete
+                          - generic [ref=e961]:
+                            - generic [ref=e966]:
+                              - generic [ref=e967]:
+                                - generic [ref=e968]:
+                                  - generic [ref=e969]: Disable
+                                  - combobox "Disable Action type" [ref=e970] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e972]: arrow_drop_down
+                            - generic [ref=e977]:
+                              - generic [ref=e978]:
+                                - generic [ref=e979]:
+                                  - generic [ref=e980]: Question
+                                  - combobox "Question Action On" [ref=e981] [cursor=pointer]
+                                - generic:
+                                  - generic: Action On
+                              - generic [ref=e983]: arrow_drop_down
+                            - generic [ref=e988]:
+                              - generic [ref=e989]:
+                                - generic [ref=e990]:
+                                  - generic [ref=e991]: Page name 1
+                                  - combobox "Page name 1 Page number" [ref=e992] [cursor=pointer]
+                                - generic:
+                                  - generic: Page number
+                              - generic [ref=e994]: arrow_drop_down
+                            - generic [ref=e999]:
+                              - generic [ref=e1000]:
+                                - generic [ref=e1001]:
+                                  - generic [ref=e1002]: What is your name?
+                                  - combobox "What is your name? Action field" [ref=e1003] [cursor=pointer]
+                                - generic:
+                                  - generic: Action field
+                              - generic [ref=e1005]: arrow_drop_down
+                            - checkbox "Irreversible" [checked] [ref=e1007] [cursor=pointer]:
+                              - img [ref=e1010]
+                              - generic [ref=e1012]: Irreversible
+                            - button [ref=e1014] [cursor=pointer]:
+                              - img [ref=e1016]: delete
+                          - generic [ref=e1017]:
+                            - generic [ref=e1022]:
+                              - generic [ref=e1023]:
+                                - generic [ref=e1024]:
+                                  - generic [ref=e1025]: Show finish page
+                                  - combobox "Show finish page Action type" [ref=e1026] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e1028]: arrow_drop_down
+                            - button [ref=e1030] [cursor=pointer]:
+                              - img [ref=e1032]: delete
+                          - generic [ref=e1033]:
+                            - generic [ref=e1038]:
+                              - generic [ref=e1039]:
+                                - generic [ref=e1040]:
+                                  - generic [ref=e1041]: Set version result state to
+                                  - combobox "Set version result state to Action type" [ref=e1042] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e1044]: arrow_drop_down
+                            - generic [ref=e1049]:
+                              - generic [ref=e1050]:
+                                - generic [ref=e1051]:
+                                  - generic [ref=e1052]: PRE PASSED 1
+                                  - combobox "PRE PASSED 1 Action value" [ref=e1053] [cursor=pointer]
+                                - generic:
+                                  - generic: Action value
+                              - generic [ref=e1055] [cursor=pointer]: close
+                              - generic [ref=e1057]: arrow_drop_down
+                            - button [ref=e1059] [cursor=pointer]:
+                              - img [ref=e1061]: delete
+                          - generic [ref=e1062]:
+                            - generic [ref=e1067]:
+                              - generic [ref=e1068]:
+                                - generic [ref=e1069]:
+                                  - generic [ref=e1070]: Set quality state to
+                                  - combobox "Set quality state to Action type" [ref=e1071] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e1073]: arrow_drop_down
+                            - generic [ref=e1078]:
+                              - generic [ref=e1079]:
+                                - generic [ref=e1080]:
+                                  - generic [ref=e1081]: Effective
+                                  - combobox "Effective Action value" [ref=e1082] [cursor=pointer]
+                                - generic:
+                                  - generic: Action value
+                              - generic [ref=e1084]: arrow_drop_down
+                            - button [ref=e1086] [cursor=pointer]:
+                              - img [ref=e1088]: delete
+                          - generic [ref=e1089]:
+                            - generic [ref=e1094]:
+                              - generic [ref=e1095]:
+                                - generic [ref=e1096]:
+                                  - generic [ref=e1097]: Set Answer to
+                                  - combobox "Set Answer to Action type" [ref=e1098] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e1100]: arrow_drop_down
+                            - generic [ref=e1105]:
+                              - generic [ref=e1106]:
+                                - generic [ref=e1107]:
+                                  - generic [ref=e1108]: Page name 1
+                                  - combobox "Page name 1 Page number" [ref=e1109] [cursor=pointer]
+                                - generic:
+                                  - generic: Page number
+                              - generic [ref=e1111]: arrow_drop_down
+                            - generic [ref=e1116]:
+                              - generic [ref=e1117]:
+                                - generic [ref=e1118]:
+                                  - generic [ref=e1119]: Rate your playwright skill
+                                  - combobox "Rate your playwright skill Action field" [ref=e1120] [cursor=pointer]
+                                - generic:
+                                  - generic: Action field
+                              - generic [ref=e1122]: arrow_drop_down
+                            - generic [ref=e1127]:
+                              - generic [ref=e1128]:
+                                - generic [ref=e1129]:
+                                  - generic [ref=e1130]: Best
+                                  - combobox "Best data" [ref=e1131] [cursor=pointer]
+                                - generic:
+                                  - generic: data
+                              - generic [ref=e1133] [cursor=pointer]: close
+                              - generic [ref=e1135]: arrow_drop_down
+                            - button [ref=e1137] [cursor=pointer]:
+                              - img [ref=e1139]: delete
+                          - generic [ref=e1140]:
+                            - generic [ref=e1145]:
+                              - generic [ref=e1146]:
+                                - generic [ref=e1147]:
+                                  - generic [ref=e1148]: Set item state to
+                                  - combobox "Set item state to Action type" [ref=e1149] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e1151]: arrow_drop_down
+                            - generic [ref=e1156]:
+                              - generic [ref=e1157]:
+                                - generic [ref=e1158]:
+                                  - generic [ref=e1159]: Risks
+                                  - combobox "Risks Module" [ref=e1160] [cursor=pointer]
+                                - generic:
+                                  - generic: Module
+                              - generic [ref=e1162]: arrow_drop_down
+                            - generic [ref=e1167]:
+                              - generic [ref=e1168]:
+                                - generic [ref=e1169]:
+                                  - generic [ref=e1170]: IN PROGRESS
+                                  - combobox "IN PROGRESS Module state" [ref=e1171] [cursor=pointer]
+                                - generic:
+                                  - generic: Module state
+                              - generic [ref=e1173]: arrow_drop_down
+                            - button [ref=e1175] [cursor=pointer]:
+                              - img [ref=e1177]: delete
+                          - generic [ref=e1178]:
+                            - generic [ref=e1183]:
+                              - generic [ref=e1184]:
+                                - generic [ref=e1185]:
+                                  - generic [ref=e1186]: Set item list field to
+                                  - combobox "Set item list field to Action type" [ref=e1187] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e1189]: arrow_drop_down
+                            - generic [ref=e1194]:
+                              - generic [ref=e1195]:
+                                - generic [ref=e1196]:
+                                  - generic [ref=e1197]: Categories
+                                  - combobox "Categories List field" [ref=e1198] [cursor=pointer]
+                                - generic:
+                                  - generic: List field
+                              - generic [ref=e1200]: arrow_drop_down
+                            - generic [ref=e1205]:
+                              - generic [ref=e1206]:
+                                - generic [ref=e1207]:
+                                  - generic [ref=e1208]: Planning
+                                  - combobox "Planning List field value" [ref=e1209] [cursor=pointer]
+                                - generic:
+                                  - generic: List field value
+                              - generic [ref=e1211]: arrow_drop_down
+                            - button [ref=e1213] [cursor=pointer]:
+                              - img [ref=e1215]: delete
+                          - generic [ref=e1216]:
+                            - generic [ref=e1221]:
+                              - generic [ref=e1222]:
+                                - generic [ref=e1223]:
+                                  - generic [ref=e1224]: Set Value to Variable
+                                  - combobox "Set Value to Variable Action type" [ref=e1225] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e1227]: arrow_drop_down
+                            - generic [ref=e1232]:
+                              - generic [ref=e1234] [cursor=pointer]: close
+                              - generic [ref=e1235]:
+                                - combobox "Variable name" [ref=e1236]: What is your age?
+                                - generic: Variable name
+                            - checkbox "Calculate Formula" [checked] [ref=e1238] [cursor=pointer]:
+                              - img [ref=e1241]
+                              - generic [ref=e1243]: Calculate Formula
+                            - generic [ref=e1249]:
+                              - textbox "Variable value" [ref=e1250]: ">=18"
+                              - generic: Variable value
+                            - button [ref=e1252] [cursor=pointer]:
+                              - img [ref=e1254]: delete
+                          - generic [ref=e1255]:
+                            - generic [ref=e1260]:
+                              - generic [ref=e1261]:
+                                - generic [ref=e1262]:
+                                  - generic [ref=e1263]: Calculate all linktab kpis
+                                  - combobox "Calculate all linktab kpis Action type" [ref=e1264] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e1266]: arrow_drop_down
+                            - generic [ref=e1271]:
+                              - generic [ref=e1272]:
+                                - generic [ref=e1273]:
+                                  - generic [ref=e1274]: Risks
+                                  - combobox "Risks For MoType" [ref=e1275] [cursor=pointer]
+                                - generic:
+                                  - generic: For MoType
+                              - generic [ref=e1277]: arrow_drop_down
+                            - button [ref=e1279] [cursor=pointer]:
+                              - img [ref=e1281]: delete
+                          - generic [ref=e1282]:
+                            - generic [ref=e1287]:
+                              - generic [ref=e1288]:
+                                - generic [ref=e1289]:
+                                  - generic [ref=e1290]: Update linked items of type
+                                  - combobox "Update linked items of type Action type" [ref=e1291] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e1293]: arrow_drop_down
+                            - generic [ref=e1298]:
+                              - generic [ref=e1299]:
+                                - generic [ref=e1300]:
+                                  - generic [ref=e1301]: Risks
+                                  - combobox "Risks Module" [ref=e1302] [cursor=pointer]
+                                - generic:
+                                  - generic: Module
+                              - generic [ref=e1304]: arrow_drop_down
+                            - button "Settings" [ref=e1306] [cursor=pointer]:
+                              - generic [ref=e1308]: Settings
+                            - button [ref=e1310] [cursor=pointer]:
+                              - img [ref=e1312]: delete
+                          - generic [ref=e1313]:
+                            - generic [ref=e1318]:
+                              - generic [ref=e1319]:
+                                - generic [ref=e1320]:
+                                  - generic [ref=e1321]: Update Current Item
+                                  - combobox "Update Current Item Action type" [ref=e1322] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e1324]: arrow_drop_down
+                            - generic [ref=e1329]:
+                              - generic [ref=e1330]:
+                                - generic [ref=e1331]:
+                                  - generic [ref=e1332]: Risks
+                                  - combobox "Risks Module" [ref=e1333] [cursor=pointer]
+                                - generic:
+                                  - generic: Module
+                              - generic [ref=e1335]: arrow_drop_down
+                            - button "Settings" [ref=e1337] [cursor=pointer]:
+                              - generic [ref=e1339]: Settings
+                            - button [ref=e1341] [cursor=pointer]:
+                              - img [ref=e1343]: delete
+                          - generic [ref=e1344]:
+                            - generic [ref=e1349]:
+                              - generic [ref=e1350]:
+                                - generic [ref=e1351]:
+                                  - generic [ref=e1352]: Send data to service
+                                  - combobox "Send data to service Action type" [ref=e1353] [cursor=pointer]
+                                - generic:
+                                  - generic: Action type
+                              - generic [ref=e1355]: arrow_drop_down
+                            - generic [ref=e1357]:
+                              - checkbox "Select / Change Template" [checked] [ref=e1360] [cursor=pointer]:
+                                - img [ref=e1363]
+                                - generic [ref=e1365]: Select / Change Template
+                              - button "Select Template" [ref=e1367] [cursor=pointer]:
+                                - generic [ref=e1369]: Select Template
+                              - button "Settings" [ref=e1371] [cursor=pointer]:
+                                - generic [ref=e1373]: Settings
+                            - button [ref=e1375] [cursor=pointer]:
+                              - img [ref=e1377]: delete
+                    - button [ref=e1378] [cursor=pointer]:
+                      - img [ref=e1380]: add
+  - iframe [ref=e1382]:
+    - generic [active]:
+      - generic:
+        - text:  
+        - button "Open chat" [ref=f4e1] [cursor=pointer]
+  - generic:
+    - dialog:
+      - generic [ref=e1384]:
+        - toolbar [ref=e1386]:
+          - generic [ref=e1387]: Select Template
+          - button [ref=e1389] [cursor=pointer]:
+            - img [ref=e1391]: close
+        - generic [ref=e1397]:
+          - generic [ref=e1398]:
+            - combobox "Select service *" [expanded] [active] [ref=e1400] [cursor=pointer]
+            - generic:
+              - generic: Select service *
+          - img [ref=e1402]
+        - generic [ref=e1405]:
+          - button "Cancel" [ref=e1406] [cursor=pointer]:
+            - generic [ref=e1408]: Cancel
+          - button "Okay" [disabled]:
+            - generic:
+              - generic: Okay
+  - listbox [ref=e1409]:
+    - listitem [ref=e1410]:
+      - generic [ref=e1412]: No results
+```
+
+# Test source
+
+```ts
+  1   | import { Locator, Page, expect } from '@playwright/test';
+  2   | import fs from 'fs';
+  3   | 
+  4   | export class UIActions {
+  5   |   constructor(private page: Page) { }
+  6   | 
+  7   |   async click(element: Locator) {
+> 8   |     await expect(element).toBeVisible();
+      |                           ^ Error: expect(locator).toBeVisible() failed
+  9   |     await expect(element).toBeEnabled();
+  10  |     await element.click();
+  11  |   }
+  12  | 
+  13  |   async doubleClick(element: Locator) {
+  14  |     await expect(element).toBeVisible();
+  15  |     await element.dblclick();
+  16  |   }
+  17  | 
+  18  |   async rightClick(element: Locator) {
+  19  |     await expect(element).toBeVisible();
+  20  |     await element.click({ button: 'right' });
+  21  |   }
+  22  | 
+  23  |   async hover(element: Locator) {
+  24  |     await expect(element).toBeVisible();
+  25  |     await element.hover();
+  26  |   }
+  27  | 
+  28  |   async type(element: Locator, value: string) {
+  29  |     await expect(element).toBeVisible();
+  30  |     await expect(element).toBeEnabled();
+  31  |     await element.clear();
+  32  |     await element.fill(value);
+  33  |     await expect(element).toHaveValue(value);
+  34  |   }
+  35  | 
+  36  |   async typeWithoutClearing(element: Locator, value: string) {
+  37  |     await expect(element).toBeEnabled();
+  38  |     await element.type(value);
+  39  | 
+  40  |     const currentValue = await element.inputValue();
+  41  |     expect(currentValue).toContain(value);
+  42  |   }
+  43  | 
+  44  |   async clear(element: Locator) {
+  45  |     await expect(element).toBeEnabled();
+  46  |     await element.clear();
+  47  |     await expect(element).toHaveValue('');
+  48  |   }
+  49  | 
+  50  |   async check(element: Locator) {
+  51  |     // await expect(element).toBeVisible();
+  52  |     await element.check();
+  53  |     await expect(element).toBeChecked();
+  54  |   }
+  55  | 
+  56  |   async uncheck(element: Locator) {
+  57  |     await expect(element).toBeVisible();
+  58  |     await element.uncheck();
+  59  |     await expect(element).not.toBeChecked();
+  60  |   }
+  61  | 
+  62  |   async selectByValue(element: Locator, value: string) {
+  63  |     await element.selectOption(value);
+  64  |     await expect(element).toHaveValue(value);
+  65  |   }
+  66  | 
+  67  |   async selectByLabel(element: Locator, label: string) {
+  68  |     await element.selectOption({ label });
+  69  |   }
+  70  | 
+  71  |   async getText(element: Locator): Promise<string> {
+  72  |     await expect(element).toBeVisible();
+  73  |     return (await element.textContent()) ?? '';
+  74  |   }
+  75  | 
+  76  |   async verifyText(element: Locator, expected: string) {
+  77  |     await expect(element).toHaveText(expected);
+  78  |   }
+  79  | 
+  80  |   async verifyContainsText(element: Locator, partial: string) {
+  81  |     await expect(element).toContainText(partial);
+  82  |   }
+  83  | 
+  84  |   async verifyValue(element: Locator, expected: string) {
+  85  |     await expect(element).toHaveValue(expected);
+  86  |   }
+  87  | 
+  88  |   async verifyCount(element: Locator, expected: number) {
+  89  |     await expect(element).toHaveCount(expected);
+  90  |   }
+  91  | 
+  92  |   async verifyAttribute(element: Locator, attributeName: string, expected: string) {
+  93  |     await expect(element).toHaveAttribute(attributeName, expected);
+  94  |   }
+  95  | 
+  96  |   async verifyChecked(element: Locator) {
+  97  |     await expect(element).toBeChecked();
+  98  |   }
+  99  | 
+  100 |   async verifyNotChecked(element: Locator) {
+  101 |     await expect(element).not.toBeChecked();
+  102 |   }
+  103 | 
+  104 |   async verifyAttached(element: Locator) {
+  105 |     await expect(element).toBeAttached();
+  106 |   }
+  107 | 
+  108 |   async verifyVisible(element: Locator) {
+```
