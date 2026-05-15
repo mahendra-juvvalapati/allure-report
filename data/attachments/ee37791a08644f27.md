@@ -1,0 +1,609 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: questionnaireCondition.spec.ts >> Questionnaire Condition Tests >> TC_QNC_030-Verify 'Update Current Item' action can be created successfully in questionnaire conditions
+- Location: tests/questionnaireCondition.spec.ts:302:9
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Nee, dank je' })
+    - locator resolved to <a role="button" id="pushActionRefuse" href="javascript:void(0)" data-beamer-keypress="true">Nee, dank je</a>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - element is outside of the viewport
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+  - element was detached from the DOM, retrying
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - text: ×
+  - link "ticket or feedback" [ref=e2] [cursor=pointer]:
+    - /url: javascript:void(0)
+    - img "ticket or feedback" [ref=e3]
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e10]:
+        - button "leftMenuOpen" [ref=e11] [cursor=pointer]:
+          - img [ref=e12]
+        - img [ref=e17]
+        - button "Turn off admin role" [ref=e20] [cursor=pointer]:
+          - img [ref=e21]:
+            - img
+        - button [ref=e23] [cursor=pointer]:
+          - img [ref=e25]:
+            - img [ref=e26]
+        - generic [ref=e31]:
+          - button [ref=e32] [cursor=pointer]:
+            - img [ref=e34]:
+              - img [ref=e35]
+          - status "45" [ref=e36]
+        - button "fullscreen" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: fullscreen
+        - button "Open beamer" [ref=e39] [cursor=pointer]:
+          - img [ref=e40]:
+            - img
+          - generic [ref=e41]: "1"
+        - button "freshDesk" [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]: info
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - img [ref=e46] [cursor=pointer]
+          - button "dehaze" [ref=e47] [cursor=pointer]:
+            - generic [ref=e48]: dehaze
+        - list [ref=e49]:
+          - generic [ref=e50]:
+            - button "profile pic" [ref=e51]
+            - generic [ref=e52]: mahendra j
+          - button "keyboard_arrow_down mahendra.juvvalapati@qualitlabs.com" [ref=e53] [cursor=pointer]:
+            - generic [ref=e54]: keyboard_arrow_down
+            - generic [ref=e55]: mahendra.juvvalapati@qualitlabs.com
+          - list [ref=e56]:
+            - button "exit_to_app Logout" [ref=e57] [cursor=pointer]:
+              - generic [ref=e58]: exit_to_app
+              - generic [ref=e59]: Logout
+        - list [ref=e61]:
+          - button "home Dashboard" [ref=e62] [cursor=pointer]:
+            - generic [ref=e63]: home
+            - generic [ref=e64]: Dashboard
+          - button "widgets Modules keyboard_arrow_down" [ref=e65] [cursor=pointer]:
+            - generic [ref=e66]: widgets
+            - generic [ref=e67]: Modules
+            - generic [ref=e68]: keyboard_arrow_down
+          - list [ref=e69]:
+            - button "Strategy" [ref=e70] [cursor=pointer]:
+              - img [ref=e71]:
+                - img
+              - generic [ref=e72]: Strategy
+            - button "Policy" [ref=e73] [cursor=pointer]:
+              - img [ref=e74]:
+                - img
+              - generic [ref=e75]: Policy
+            - button "Programs" [ref=e76] [cursor=pointer]:
+              - img [ref=e77]:
+                - img
+              - generic [ref=e78]: Programs
+            - button "projects" [ref=e79] [cursor=pointer]:
+              - img [ref=e80]:
+                - img
+              - generic [ref=e81]: projects
+            - button "Dialogues" [ref=e82] [cursor=pointer]:
+              - img [ref=e83]:
+                - img
+              - generic [ref=e84]: Dialogues
+            - button "Objectives" [ref=e85] [cursor=pointer]:
+              - img [ref=e86]:
+                - img
+              - generic [ref=e87]: Objectives
+            - button "Processes" [ref=e88] [cursor=pointer]:
+              - img [ref=e89]:
+                - img
+              - generic [ref=e90]: Processes
+            - button "Process steps" [ref=e91] [cursor=pointer]:
+              - img [ref=e92]:
+                - img
+              - generic [ref=e93]: Process steps
+            - button "Organisation functions" [ref=e94] [cursor=pointer]:
+              - img [ref=e95]:
+                - img
+              - generic [ref=e96]: Organisation functions
+            - button "KSF's - Opportunities" [ref=e97] [cursor=pointer]:
+              - img [ref=e98]:
+                - img
+              - generic [ref=e99]: KSF's - Opportunities
+            - button "Stakeholders" [ref=e100] [cursor=pointer]:
+              - img [ref=e101]:
+                - img
+              - generic [ref=e102]: Stakeholders
+            - button "Causes" [ref=e103] [cursor=pointer]:
+              - img [ref=e104]:
+                - img
+              - generic [ref=e105]: Causes
+            - button "Risks" [ref=e106] [cursor=pointer]:
+              - img [ref=e107]:
+                - img
+              - generic [ref=e108]: Risks
+            - button "Effects" [ref=e109] [cursor=pointer]:
+              - img [ref=e110]:
+                - img
+              - generic [ref=e111]: Effects
+            - button "Opportunities" [ref=e112] [cursor=pointer]:
+              - img [ref=e113]:
+                - img
+              - generic [ref=e114]: Opportunities
+            - button "Standards Frameworks" [ref=e115] [cursor=pointer]:
+              - img [ref=e116]:
+                - img
+              - generic [ref=e117]: Standards Frameworks
+            - button "Laws and regulations" [ref=e118] [cursor=pointer]:
+              - img [ref=e119]:
+                - img
+              - generic [ref=e120]: Laws and regulations
+            - button "Measures" [ref=e121] [cursor=pointer]:
+              - img [ref=e122]:
+                - img
+              - generic [ref=e123]: Measures
+            - button "Assets" [ref=e124] [cursor=pointer]:
+              - img [ref=e125]:
+                - img
+              - generic [ref=e126]: Assets
+            - button "Information systems" [ref=e127] [cursor=pointer]:
+              - img [ref=e128]:
+                - img
+              - generic [ref=e129]: Information systems
+            - button "Processing" [ref=e130] [cursor=pointer]:
+              - img [ref=e131]:
+                - img
+              - generic [ref=e132]: Processing
+            - button "Audits" [ref=e133] [cursor=pointer]:
+              - img [ref=e134]:
+                - img
+              - generic [ref=e135]: Audits
+            - button "Audit sets" [ref=e136] [cursor=pointer]:
+              - img [ref=e137]:
+                - img
+              - generic [ref=e138]: Audit sets
+            - button "Impact Assessments" [ref=e139] [cursor=pointer]:
+              - img [ref=e140]:
+                - img
+              - generic [ref=e141]: Impact Assessments
+            - button "Tests" [ref=e142] [cursor=pointer]:
+              - img [ref=e143]:
+                - img
+              - generic [ref=e144]: Tests
+            - button "Findings" [ref=e145] [cursor=pointer]:
+              - img [ref=e146]:
+                - img
+              - generic [ref=e147]: Findings
+            - button "Problems" [ref=e148] [cursor=pointer]:
+              - img [ref=e149]:
+                - img
+              - generic [ref=e150]: Problems
+            - button "Changes" [ref=e151] [cursor=pointer]:
+              - img [ref=e152]:
+                - img
+              - generic [ref=e153]: Changes
+            - button "Cases" [ref=e154] [cursor=pointer]:
+              - img [ref=e155]:
+                - img
+              - generic [ref=e156]: Cases
+            - button "Tasks" [ref=e157] [cursor=pointer]:
+              - img [ref=e158]:
+                - img
+              - generic [ref=e159]: Tasks
+            - button "Documents" [ref=e160] [cursor=pointer]:
+              - img [ref=e161]:
+                - img
+              - generic [ref=e162]: Documents
+            - button "News items" [ref=e163] [cursor=pointer]:
+              - img [ref=e164]:
+                - img
+              - generic [ref=e165]: News items
+            - button "Related parties" [ref=e166] [cursor=pointer]:
+              - img [ref=e167]:
+                - img
+              - generic [ref=e168]: Related parties
+            - button "Contracts" [ref=e169] [cursor=pointer]:
+              - img [ref=e170]:
+                - img
+              - generic [ref=e171]: Contracts
+            - button "Vendors" [ref=e172] [cursor=pointer]:
+              - img [ref=e173]:
+                - img
+              - generic [ref=e174]: Vendors
+            - button "Performance agreements" [ref=e175] [cursor=pointer]:
+              - img [ref=e176]:
+                - img
+              - generic [ref=e177]: Performance agreements
+            - button "Key Figures" [ref=e178] [cursor=pointer]:
+              - img [ref=e179]:
+                - img
+              - generic [ref=e180]: Key Figures
+            - button "Settings" [ref=e181] [cursor=pointer]:
+              - img [ref=e182]:
+                - img
+              - generic [ref=e183]: Settings
+            - button "Critical Business Scenarios" [ref=e184] [cursor=pointer]:
+              - img [ref=e185]:
+                - img
+              - generic [ref=e186]: Critical Business Scenarios
+            - button "BCM Plans" [ref=e187] [cursor=pointer]:
+              - img [ref=e188]:
+                - img
+              - generic [ref=e189]: BCM Plans
+            - button "Context analysis" [ref=e190] [cursor=pointer]:
+              - img [ref=e191]:
+                - img
+              - generic [ref=e192]: Context analysis
+            - button "Situations" [ref=e193] [cursor=pointer]:
+              - img [ref=e194]:
+                - img
+              - generic [ref=e195]: Situations
+            - button "Planstappen" [ref=e196] [cursor=pointer]:
+              - img [ref=e197]:
+                - img
+              - generic [ref=e198]: Planstappen
+            - button "BOBOC logs" [ref=e199] [cursor=pointer]:
+              - img [ref=e200]:
+                - img
+              - generic [ref=e201]: BOBOC logs
+          - button "build Maintain keyboard_arrow_down" [ref=e202] [cursor=pointer]:
+            - generic [ref=e203]: build
+            - generic [ref=e204]: Maintain
+            - generic [ref=e205]: keyboard_arrow_down
+          - list [ref=e206]:
+            - button "assignment_turned_in Questionnaires, forms" [ref=e207] [cursor=pointer]:
+              - generic [ref=e208]: assignment_turned_in
+              - generic [ref=e209]: Questionnaires, forms
+            - button "Workflows & conditions" [ref=e210] [cursor=pointer]:
+              - img [ref=e211]:
+                - img
+              - generic [ref=e212]: Workflows & conditions
+    - generic [ref=e217]:
+      - generic [ref=e219]:
+        - generic [ref=e225]:
+          - generic [ref=e227] [cursor=pointer]: Qualitlabs
+          - generic [ref=e229]: keyboard_arrow_right
+          - generic [ref=e231] [cursor=pointer]: Knowledge database
+          - generic [ref=e233]: keyboard_arrow_right
+          - generic [ref=e235] [cursor=pointer]: Qa automation
+        - generic [ref=e236]:
+          - generic [ref=e238]:
+            - generic [ref=e240]: Questionnaire
+            - generic [ref=e241]:
+              - button [ref=e243] [cursor=pointer]:
+                - img [ref=e245]: more_vert
+              - button [ref=e247] [cursor=pointer]:
+                - img [ref=e249]:
+                  - img [ref=e250]
+          - generic [ref=e252]:
+            - generic [ref=e257]:
+              - generic [ref=e259]: search
+              - textbox [ref=e261]:
+                - /placeholder: Type to search
+            - generic [ref=e262]:
+              - generic [ref=e267] [cursor=pointer]:
+                - generic [ref=e268]:
+                  - generic [ref=e269]:
+                    - generic [ref=e270]: No Group
+                    - combobox "No Group Group by" [ref=e271]: No Group
+                  - generic:
+                    - generic: Group by
+                - generic [ref=e273]: arrow_drop_down
+              - button [ref=e275] [cursor=pointer]:
+                - img [ref=e277]:
+                  - img [ref=e278]
+      - generic [ref=e281]:
+        - button [ref=e282] [cursor=pointer]:
+          - img [ref=e284]: add
+        - generic [ref=e288]:
+          - generic [ref=e289]: Loading...
+          - text:  
+          - grid [ref=e290]:
+            - rowgroup [ref=e291]:
+              - row "Type Status Code Questionnaire name Owner Publish status" [ref=e292]:
+                - columnheader "Type" [ref=e293] [cursor=pointer]:
+                  - generic [ref=e295]: Type
+                  - text: 
+                  - generic:    
+                - columnheader "Status" [ref=e296] [cursor=pointer]:
+                  - generic [ref=e298]: Status
+                  - text: 
+                  - generic:    
+                - columnheader "Code" [ref=e299] [cursor=pointer]:
+                  - generic [ref=e301]: Code
+                  - text: 
+                  - generic:    
+                - columnheader "Questionnaire name" [ref=e302] [cursor=pointer]:
+                  - generic [ref=e304]: Questionnaire name
+                  - text: 
+                  - generic:    
+                - columnheader "Owner" [ref=e305] [cursor=pointer]:
+                  - generic [ref=e307]: Owner
+                  - text: 
+                  - generic:    
+                - columnheader "Publish status" [ref=e308] [cursor=pointer]:
+                  - generic [ref=e310]: Publish status
+                  - text: 
+                  - generic:    
+            - rowgroup [ref=e311]:
+              - row "Single active Q1 1777530305728 Questionnaire 1777530305728 mahendra Unpublished" [ref=e312]:
+                - gridcell "Single" [ref=e313]
+                - gridcell "active" [ref=e314]
+                - gridcell "Q1 1777530305728" [ref=e315]
+                - gridcell "Questionnaire 1777530305728" [ref=e316]
+                - gridcell "mahendra" [ref=e317]
+                - gridcell "Unpublished" [ref=e318]
+              - row "Single active Q1 Questionnaire_1777530330185 mahendra Unpublished" [ref=e319]:
+                - gridcell "Single" [ref=e320]
+                - gridcell "active" [ref=e321]
+                - gridcell "Q1" [ref=e322]
+                - gridcell "Questionnaire_1777530330185" [ref=e323]
+                - gridcell "mahendra" [ref=e324]
+                - gridcell "Unpublished" [ref=e325]
+              - row "Single active Q1 1777530615664 Questionnaire 1777530615664 mahendra Published" [ref=e326]:
+                - gridcell "Single" [ref=e327]
+                - gridcell "active" [ref=e328]
+                - gridcell "Q1 1777530615664" [ref=e329]
+                - gridcell "Questionnaire 1777530615664" [ref=e330]
+                - gridcell "mahendra" [ref=e331]
+                - gridcell "Published" [ref=e332]
+              - row "Single active Q1 Questionnaire_1777530732050 mahendra Published" [ref=e333]:
+                - gridcell "Single" [ref=e334]
+                - gridcell "active" [ref=e335]
+                - gridcell "Q1" [ref=e336]
+                - gridcell "Questionnaire_1777530732050" [ref=e337]
+                - gridcell "mahendra" [ref=e338]
+                - gridcell "Published" [ref=e339]
+              - row "Single active Q1 Questionnaire_1777531015300 mahendra Unpublished" [ref=e340]:
+                - gridcell "Single" [ref=e341]
+                - gridcell "active" [ref=e342]
+                - gridcell "Q1" [ref=e343]
+                - gridcell "Questionnaire_1777531015300" [ref=e344]
+                - gridcell "mahendra" [ref=e345]
+                - gridcell "Unpublished" [ref=e346]
+              - row "Single active Q1 1777531027420 Questionnaire 1777531027420 mahendra Published" [ref=e347]:
+                - gridcell "Single" [ref=e348]
+                - gridcell "active" [ref=e349]
+                - gridcell "Q1 1777531027420" [ref=e350]
+                - gridcell "Questionnaire 1777531027420" [ref=e351]
+                - gridcell "mahendra" [ref=e352]
+                - gridcell "Published" [ref=e353]
+              - row "Single active Q1 Questionnaire_1777531319429 mahendra Published" [ref=e354]:
+                - gridcell "Single" [ref=e355]
+                - gridcell "active" [ref=e356]
+                - gridcell "Q1" [ref=e357]
+                - gridcell "Questionnaire_1777531319429" [ref=e358]
+                - gridcell "mahendra" [ref=e359]
+                - gridcell "Published" [ref=e360]
+              - row "Single active Q1 Questionnaire_1777531334554 mahendra Unpublished" [ref=e361]:
+                - gridcell "Single" [ref=e362]
+                - gridcell "active" [ref=e363]
+                - gridcell "Q1" [ref=e364]
+                - gridcell "Questionnaire_1777531334554" [ref=e365]
+                - gridcell "mahendra" [ref=e366]
+                - gridcell "Unpublished" [ref=e367]
+              - row "Single active Q1 Questionnaire_1777532714823 mahendra Unpublished" [ref=e368]:
+                - gridcell "Single" [ref=e369]
+                - gridcell "active" [ref=e370]
+                - gridcell "Q1" [ref=e371]
+                - gridcell "Questionnaire_1777532714823" [ref=e372]
+                - gridcell "mahendra" [ref=e373]
+                - gridcell "Unpublished" [ref=e374]
+              - row "Single active Q1 1777532685913 Questionnaire 1777532685913 mahendra Published" [ref=e375]:
+                - gridcell "Single" [ref=e376]
+                - gridcell "active" [ref=e377]
+                - gridcell "Q1 1777532685913" [ref=e378]
+                - gridcell "Questionnaire 1777532685913" [ref=e379]
+                - gridcell "mahendra" [ref=e380]
+                - gridcell "Published" [ref=e381]
+              - row "Single active Q1 1777532896902 Questionnaire 1777532896902 mahendra Unpublished" [ref=e382]:
+                - gridcell "Single" [ref=e383]
+                - gridcell "active" [ref=e384]
+                - gridcell "Q1 1777532896902" [ref=e385]
+                - gridcell "Questionnaire 1777532896902" [ref=e386]
+                - gridcell "mahendra" [ref=e387]
+                - gridcell "Unpublished" [ref=e388]
+              - row "Single active Q1 1777533444648 Questionnaire 1777533444648 mahendra Published" [ref=e389]:
+                - gridcell "Single" [ref=e390]
+                - gridcell "active" [ref=e391]
+                - gridcell "Q1 1777533444648" [ref=e392]
+                - gridcell "Questionnaire 1777533444648" [ref=e393]
+                - gridcell "mahendra" [ref=e394]
+                - gridcell "Published" [ref=e395]
+              - row "Single active Q1 Questionnaire_1777533471347 mahendra Published" [ref=e396]:
+                - gridcell "Single" [ref=e397]
+                - gridcell "active" [ref=e398]
+                - gridcell "Q1" [ref=e399]
+                - gridcell "Questionnaire_1777533471347" [ref=e400]
+                - gridcell "mahendra" [ref=e401]
+                - gridcell "Published" [ref=e402]
+              - row "Single active Q1 1777533908720 Questionnaire 1777533908720 mahendra Published" [ref=e403]:
+                - gridcell "Single" [ref=e404]
+                - gridcell "active" [ref=e405]
+                - gridcell "Q1 1777533908720" [ref=e406]
+                - gridcell "Questionnaire 1777533908720" [ref=e407]
+                - gridcell "mahendra" [ref=e408]
+                - gridcell "Published" [ref=e409]
+              - row "Single active Q1 Questionnaire_1777533960442 mahendra Published" [ref=e410]:
+                - gridcell "Single" [ref=e411]
+                - gridcell "active" [ref=e412]
+                - gridcell "Q1" [ref=e413]
+                - gridcell "Questionnaire_1777533960442" [ref=e414]
+                - gridcell "mahendra" [ref=e415]
+                - gridcell "Published" [ref=e416]
+              - row "Single active Q1 Questionnaire_1777534303919 mahendra Published" [ref=e417]:
+                - gridcell "Single" [ref=e418]
+                - gridcell "active" [ref=e419]
+                - gridcell "Q1" [ref=e420]
+                - gridcell "Questionnaire_1777534303919" [ref=e421]
+                - gridcell "mahendra" [ref=e422]
+                - gridcell "Published" [ref=e423]
+              - row "Single active Q1 1777534296645 Questionnaire 1777534296645 mahendra Published" [ref=e424]:
+                - gridcell "Single" [ref=e425]
+                - gridcell "active" [ref=e426]
+                - gridcell "Q1 1777534296645" [ref=e427]
+                - gridcell "Questionnaire 1777534296645" [ref=e428]
+                - gridcell "mahendra" [ref=e429]
+                - gridcell "Published" [ref=e430]
+              - row "Single active Q1 1777534359089 Questionnaire 1777534359089 anusha Published" [ref=e431]:
+                - gridcell "Single" [ref=e432]
+                - gridcell "active" [ref=e433]
+                - gridcell "Q1 1777534359089" [ref=e434]
+                - gridcell "Questionnaire 1777534359089" [ref=e435]
+                - gridcell "anusha" [ref=e436]
+                - gridcell "Published" [ref=e437]
+              - row "Single active Q1 Questionnaire_1777534650946 mahendra Published" [ref=e438]:
+                - gridcell "Single" [ref=e439]
+                - gridcell "active" [ref=e440]
+                - gridcell "Q1" [ref=e441]
+                - gridcell "Questionnaire_1777534650946" [ref=e442]
+                - gridcell "mahendra" [ref=e443]
+                - gridcell "Published" [ref=e444]
+            - rowgroup
+            - rowgroup
+            - rowgroup
+          - generic [ref=e451]:
+            - tablist [ref=e452]:
+              - tab "Visible data" [ref=e453] [cursor=pointer]:
+                - generic [ref=e454]: 
+                - generic [ref=e455]: Visible data
+            - text:     
+          - text:    
+  - iframe [ref=e457]:
+    - generic [active]:
+      - generic:
+        - text:  
+        - button "Open chat" [ref=f6e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1   | import { Locator, Page, expect } from '@playwright/test';
+  2   | import fs from 'fs';
+  3   | 
+  4   | export class UIActions {
+  5   |   constructor(private page: Page) { }
+  6   | 
+  7   |   async click(element: Locator) {
+  8   |     await expect(element).toBeVisible();
+  9   |     await expect(element).toBeEnabled();
+> 10  |     await element.click();
+      |                   ^ TimeoutError: locator.click: Timeout 15000ms exceeded.
+  11  |   }
+  12  | 
+  13  |   async doubleClick(element: Locator) {
+  14  |     await expect(element).toBeVisible();
+  15  |     await element.dblclick();
+  16  |   }
+  17  | 
+  18  |   async rightClick(element: Locator) {
+  19  |     await expect(element).toBeVisible();
+  20  |     await element.click({ button: 'right' });
+  21  |   }
+  22  | 
+  23  |   async hover(element: Locator) {
+  24  |     await expect(element).toBeVisible();
+  25  |     await element.hover();
+  26  |   }
+  27  | 
+  28  |   async type(element: Locator, value: string) {
+  29  |     await expect(element).toBeVisible();
+  30  |     await expect(element).toBeEnabled();
+  31  |     await element.clear();
+  32  |     await element.fill(value);
+  33  |     await expect(element).toHaveValue(value);
+  34  |   }
+  35  | 
+  36  |   async typeWithoutClearing(element: Locator, value: string) {
+  37  |     await expect(element).toBeEnabled();
+  38  |     await element.type(value);
+  39  | 
+  40  |     const currentValue = await element.inputValue();
+  41  |     expect(currentValue).toContain(value);
+  42  |   }
+  43  | 
+  44  |   async clear(element: Locator) {
+  45  |     await expect(element).toBeEnabled();
+  46  |     await element.clear();
+  47  |     await expect(element).toHaveValue('');
+  48  |   }
+  49  | 
+  50  |   async check(element: Locator) {
+  51  |     // await expect(element).toBeVisible();
+  52  |     await element.check();
+  53  |     await expect(element).toBeChecked();
+  54  |   }
+  55  | 
+  56  |   async uncheck(element: Locator) {
+  57  |     await expect(element).toBeVisible();
+  58  |     await element.uncheck();
+  59  |     await expect(element).not.toBeChecked();
+  60  |   }
+  61  | 
+  62  |   async selectByValue(element: Locator, value: string) {
+  63  |     await element.selectOption(value);
+  64  |     await expect(element).toHaveValue(value);
+  65  |   }
+  66  | 
+  67  |   async selectByLabel(element: Locator, label: string) {
+  68  |     await element.selectOption({ label });
+  69  |   }
+  70  | 
+  71  |   async getText(element: Locator): Promise<string> {
+  72  |     await expect(element).toBeVisible();
+  73  |     return (await element.textContent()) ?? '';
+  74  |   }
+  75  | 
+  76  |   async verifyText(element: Locator, expected: string) {
+  77  |     await expect(element).toHaveText(expected);
+  78  |   }
+  79  | 
+  80  |   async verifyContainsText(element: Locator, partial: string) {
+  81  |     await expect(element).toContainText(partial);
+  82  |   }
+  83  | 
+  84  |   async verifyValue(element: Locator, expected: string) {
+  85  |     await expect(element).toHaveValue(expected);
+  86  |   }
+  87  | 
+  88  |   async verifyCount(element: Locator, expected: number) {
+  89  |     await expect(element).toHaveCount(expected);
+  90  |   }
+  91  | 
+  92  |   async verifyAttribute(element: Locator, attributeName: string, expected: string) {
+  93  |     await expect(element).toHaveAttribute(attributeName, expected);
+  94  |   }
+  95  | 
+  96  |   async verifyChecked(element: Locator) {
+  97  |     await expect(element).toBeChecked();
+  98  |   }
+  99  | 
+  100 |   async verifyNotChecked(element: Locator) {
+  101 |     await expect(element).not.toBeChecked();
+  102 |   }
+  103 | 
+  104 |   async verifyAttached(element: Locator) {
+  105 |     await expect(element).toBeAttached();
+  106 |   }
+  107 | 
+  108 |   async verifyVisible(element: Locator) {
+  109 |     await expect(element).toBeVisible();
+  110 |   }
+```
