@@ -1,0 +1,596 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: E2E_Tests/FC013_questionnaire.spec.ts >> FC_013_Questionnaire Flow >> Configure questionnaire with 'No Settings' and verify 'Set item state to' action is executed when Question condition is triggered on 'Entering the questionnaire the first time' and check Questionnaire 'Generate report and send to service' action
+- Location: tests/E2E_Tests/FC013_questionnaire.spec.ts:37:9
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: locator('[data-test-mo-question-name="attributes"]')
+Expected: visible
+Timeout: 15000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 15000ms
+  - waiting for locator('[data-test-mo-question-name="attributes"]')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - text: ×
+  - link "ticket or feedback" [ref=e2] [cursor=pointer]:
+    - /url: javascript:void(0)
+    - img "ticket or feedback" [ref=e3]
+  - main [ref=e6]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e12]:
+          - button "leftMenuOpen" [ref=e13] [cursor=pointer]:
+            - img [ref=e14]
+          - generic [ref=e15]:
+            - img [ref=e19]
+            - heading "QualiTlabs Hyd" [level=2] [ref=e23]
+          - generic [ref=e27] [cursor=pointer]: search
+          - button "Turn off admin role" [ref=e28] [cursor=pointer]:
+            - img [ref=e29]:
+              - img
+          - button [ref=e31] [cursor=pointer]:
+            - img [ref=e33]:
+              - img [ref=e34]
+          - generic [ref=e39]:
+            - button [ref=e40] [cursor=pointer]:
+              - img [ref=e42]:
+                - img [ref=e43]
+            - status "33" [ref=e44]
+          - button "fullscreen" [ref=e45] [cursor=pointer]:
+            - generic [ref=e46]: fullscreen
+          - button "Open beamer" [ref=e47] [cursor=pointer]:
+            - img [ref=e48]:
+              - img
+            - generic [ref=e49]: "1"
+          - button "freshDesk" [ref=e50] [cursor=pointer]:
+            - generic [ref=e51]: info
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - img [ref=e54] [cursor=pointer]
+            - button "dehaze" [ref=e55] [cursor=pointer]:
+              - generic [ref=e56]: dehaze
+          - list [ref=e57]:
+            - generic [ref=e58]:
+              - button "profile pic" [ref=e59]
+              - generic [ref=e60]: mahendra j
+            - button "keyboard_arrow_down mahendra.juvvalapati@qualitlabs.com" [ref=e61] [cursor=pointer]:
+              - generic [ref=e62]: keyboard_arrow_down
+              - generic [ref=e63]: mahendra.juvvalapati@qualitlabs.com
+            - list [ref=e64]:
+              - button "account_box My Data" [ref=e65] [cursor=pointer]:
+                - generic [ref=e66]: account_box
+                - generic [ref=e67]: My Data
+              - button "settings Settings" [ref=e68] [cursor=pointer]:
+                - generic [ref=e69]: settings
+                - generic [ref=e70]: Settings
+              - button "exit_to_app Logout" [ref=e71] [cursor=pointer]:
+                - generic [ref=e72]: exit_to_app
+                - generic [ref=e73]: Logout
+          - list [ref=e75]:
+            - button "Add new user" [ref=e76] [cursor=pointer]:
+              - img [ref=e77]:
+                - img
+              - generic [ref=e78]: Add new user
+            - button "business Environments" [ref=e79] [cursor=pointer]:
+              - generic [ref=e80]: business
+              - generic [ref=e81]: Environments
+            - button "home Dashboard" [ref=e82] [cursor=pointer]:
+              - generic [ref=e83]: home
+              - generic [ref=e84]: Dashboard
+            - button "widgets Modules keyboard_arrow_down" [ref=e85] [cursor=pointer]:
+              - generic [ref=e86]: widgets
+              - generic [ref=e87]: Modules
+              - generic [ref=e88]: keyboard_arrow_down
+            - list [ref=e89]:
+              - button "Strategy" [ref=e90] [cursor=pointer]:
+                - img [ref=e91]:
+                  - img
+                - generic [ref=e92]: Strategy
+              - button "Policy" [ref=e93] [cursor=pointer]:
+                - img [ref=e94]:
+                  - img
+                - generic [ref=e95]: Policy
+              - button "Programs" [ref=e96] [cursor=pointer]:
+                - img [ref=e97]:
+                  - img
+                - generic [ref=e98]: Programs
+              - button "projects" [ref=e99] [cursor=pointer]:
+                - img [ref=e100]:
+                  - img
+                - generic [ref=e101]: projects
+              - button "Dialogues" [ref=e102] [cursor=pointer]:
+                - img [ref=e103]:
+                  - img
+                - generic [ref=e104]: Dialogues
+              - button "Objectives" [ref=e105] [cursor=pointer]:
+                - img [ref=e106]:
+                  - img
+                - generic [ref=e107]: Objectives
+              - button "Processes" [ref=e108] [cursor=pointer]:
+                - img [ref=e109]:
+                  - img
+                - generic [ref=e110]: Processes
+              - button "Organisation functions" [ref=e111] [cursor=pointer]:
+                - img [ref=e112]:
+                  - img
+                - generic [ref=e113]: Organisation functions
+              - button "KSF's - Opportunities" [ref=e114] [cursor=pointer]:
+                - img [ref=e115]:
+                  - img
+                - generic [ref=e116]: KSF's - Opportunities
+              - button "Stakeholders" [ref=e117] [cursor=pointer]:
+                - img [ref=e118]:
+                  - img
+                - generic [ref=e119]: Stakeholders
+              - button "Risks" [ref=e120] [cursor=pointer]:
+                - img [ref=e121]:
+                  - img
+                - generic [ref=e122]: Risks
+              - button "Opportunities" [ref=e123] [cursor=pointer]:
+                - img [ref=e124]:
+                  - img
+                - generic [ref=e125]: Opportunities
+              - button "Standards Frameworks" [ref=e126] [cursor=pointer]:
+                - img [ref=e127]:
+                  - img
+                - generic [ref=e128]: Standards Frameworks
+              - button "Laws and regulations" [ref=e129] [cursor=pointer]:
+                - img [ref=e130]:
+                  - img
+                - generic [ref=e131]: Laws and regulations
+              - button "Measures" [ref=e132] [cursor=pointer]:
+                - img [ref=e133]:
+                  - img
+                - generic [ref=e134]: Measures
+              - button "Assets" [ref=e135] [cursor=pointer]:
+                - img [ref=e136]:
+                  - img
+                - generic [ref=e137]: Assets
+              - button "Information systems" [ref=e138] [cursor=pointer]:
+                - img [ref=e139]:
+                  - img
+                - generic [ref=e140]: Information systems
+              - button "Processing" [ref=e141] [cursor=pointer]:
+                - img [ref=e142]:
+                  - img
+                - generic [ref=e143]: Processing
+              - button "Audits" [ref=e144] [cursor=pointer]:
+                - img [ref=e145]:
+                  - img
+                - generic [ref=e146]: Audits
+              - button "Audit sets" [ref=e147] [cursor=pointer]:
+                - img [ref=e148]:
+                  - img
+                - generic [ref=e149]: Audit sets
+              - button "Impact Assessments" [ref=e150] [cursor=pointer]:
+                - img [ref=e151]:
+                  - img
+                - generic [ref=e152]: Impact Assessments
+              - button "Tests" [ref=e153] [cursor=pointer]:
+                - img [ref=e154]:
+                  - img
+                - generic [ref=e155]: Tests
+              - button "Findings" [ref=e156] [cursor=pointer]:
+                - img [ref=e157]:
+                  - img
+                - generic [ref=e158]: Findings
+              - button "Problems" [ref=e159] [cursor=pointer]:
+                - img [ref=e160]:
+                  - img
+                - generic [ref=e161]: Problems
+              - button "Changes" [ref=e162] [cursor=pointer]:
+                - img [ref=e163]:
+                  - img
+                - generic [ref=e164]: Changes
+              - button "Cases" [ref=e165] [cursor=pointer]:
+                - img [ref=e166]:
+                  - img
+                - generic [ref=e167]: Cases
+              - button "Tasks" [ref=e168] [cursor=pointer]:
+                - img [ref=e169]:
+                  - img
+                - generic [ref=e170]: Tasks
+              - button "Documents" [ref=e171] [cursor=pointer]:
+                - img [ref=e172]:
+                  - img
+                - generic [ref=e173]: Documents
+              - button "News items" [ref=e174] [cursor=pointer]:
+                - img [ref=e175]:
+                  - img
+                - generic [ref=e176]: News items
+              - button "Related parties" [ref=e177] [cursor=pointer]:
+                - img [ref=e178]:
+                  - img
+                - generic [ref=e179]: Related parties
+              - button "Contracts" [ref=e180] [cursor=pointer]:
+                - img [ref=e181]:
+                  - img
+                - generic [ref=e182]: Contracts
+              - button "Vendors" [ref=e183] [cursor=pointer]:
+                - img [ref=e184]:
+                  - img
+                - generic [ref=e185]: Vendors
+              - button "Performance agreements" [ref=e186] [cursor=pointer]:
+                - img [ref=e187]:
+                  - img
+                - generic [ref=e188]: Performance agreements
+              - button "Key Figures" [ref=e189] [cursor=pointer]:
+                - img [ref=e190]:
+                  - img
+                - generic [ref=e191]: Key Figures
+              - button "Settings" [ref=e192] [cursor=pointer]:
+                - img [ref=e193]:
+                  - img
+                - generic [ref=e194]: Settings
+              - button "Critical Business Scenarios" [ref=e195] [cursor=pointer]:
+                - img [ref=e196]:
+                  - img
+                - generic [ref=e197]: Critical Business Scenarios
+              - button "BCM Plans" [ref=e198] [cursor=pointer]:
+                - img [ref=e199]:
+                  - img
+                - generic [ref=e200]: BCM Plans
+              - button "Context analysis" [ref=e201] [cursor=pointer]:
+                - img [ref=e202]:
+                  - img
+                - generic [ref=e203]: Context analysis
+              - button "Situations" [ref=e204] [cursor=pointer]:
+                - img [ref=e205]:
+                  - img
+                - generic [ref=e206]: Situations
+      - generic [ref=e212]:
+        - generic [ref=e214]:
+          - generic [ref=e215]:
+            - generic [ref=e217]:
+              - generic [ref=e218] [cursor=pointer]:
+                - generic: apps
+                - generic:
+                  - img
+              - list [ref=e219]:
+                - listitem [ref=e220]:
+                  - generic [ref=e222]:
+                    - generic:
+                      - img
+                    - generic [ref=e223]: Risk
+            - 'button "version:No repeatplan - 1 Version name keyboard_arrow_down Executor: ALL" [ref=e226] [cursor=pointer]':
+              - generic [ref=e227]: version:No repeatplan - 1 Version name
+              - generic [ref=e228]: keyboard_arrow_down
+              - generic [ref=e229]: "Executor: ALL"
+            - button "settings" [ref=e231] [cursor=pointer]:
+              - img [ref=e232]: settings
+            - generic [ref=e233]:
+              - button "add mo to projects" [ref=e235] [cursor=pointer]:
+                - img [ref=e236]:
+                  - img
+              - button [ref=e237] [cursor=pointer]:
+                - img [ref=e239]:
+                  - img [ref=e240]
+          - text: ▼ ▼
+        - generic [ref=e241]:
+          - generic [ref=e243]:
+            - img [ref=e245]:
+              - img
+            - generic [ref=e246]:
+              - generic [ref=e248]: "Risk: Risk 1779357576350"
+              - button "Copy item" [ref=e250] [cursor=pointer]:
+                - img "copy item" [ref=e251]: file_copy
+              - button "Close current version and start new version" [ref=e252] [cursor=pointer]:
+                - img "quick-version" [ref=e253]:
+                  - img
+              - generic [ref=e254]:
+                - button "previous item" [disabled] [ref=e255]:
+                  - img "previous item" [ref=e256]:
+                    - img
+                - button "previous item" [disabled] [ref=e257]:
+                  - img "previous item" [ref=e258]:
+                    - img
+          - generic [ref=e259]:
+            - img:
+              - img
+            - generic [ref=e260]:
+              - generic [ref=e261]:
+                - button "Previous Page" [disabled] [ref=e263]:
+                  - img [ref=e264]:
+                    - img
+                - button "Next Page" [ref=e265] [cursor=pointer]:
+                  - img [ref=e266]:
+                    - img
+                - generic [ref=e267]:
+                  - tablist "Use the left and right arrow keys to navigate between tabs" [ref=e268]:
+                    - tab "Gross risk" [ref=e269] [cursor=pointer]:
+                      - generic [ref=e271]: Gross risk
+                    - tab "Net risk" [ref=e272] [cursor=pointer]:
+                      - generic [ref=e274]: Net risk
+                    - tab "Bowtie" [ref=e275] [cursor=pointer]:
+                      - generic [ref=e277]: Bowtie
+                    - tab "Measures" [ref=e278] [cursor=pointer]:
+                      - generic [ref=e280]: Measures
+                    - tab "Kritieke Bedrijfsfuncties" [ref=e281] [cursor=pointer]:
+                      - generic [ref=e283]: Kritieke Bedrijfsfuncties
+                    - tab "Dialogue" [selected] [ref=e284]:
+                      - generic [ref=e286]: Dialogue
+                    - tab "Chat" [ref=e287] [cursor=pointer]:
+                      - generic [ref=e289]: Chat
+                    - tab "Information systems" [ref=e290] [cursor=pointer]:
+                      - generic [ref=e292]: Information systems
+                    - tab "Related" [ref=e293] [cursor=pointer]:
+                      - generic [ref=e295]: Related
+                    - tab "Tasks" [ref=e296] [cursor=pointer]:
+                      - generic [ref=e298]: Tasks
+                    - tab "Key Indicators" [ref=e299] [cursor=pointer]:
+                      - generic [ref=e301]: Key Indicators
+                    - tab "History" [ref=e302] [cursor=pointer]:
+                      - generic [ref=e304]: History
+                    - tab "mo data" [ref=e305] [cursor=pointer]:
+                      - generic [ref=e307]: mo data
+                    - tab "Risks" [ref=e308] [cursor=pointer]:
+                      - generic [ref=e310]: Risks
+                  - generic [ref=e312]:
+                    - generic [ref=e315] [cursor=pointer]: Gross risk
+                    - generic [ref=e318] [cursor=pointer]: Net risk
+                    - generic [ref=e321] [cursor=pointer]: Bowtie
+                    - generic [ref=e324] [cursor=pointer]: Measures
+                    - generic [ref=e327] [cursor=pointer]: Kritieke Bedrijfsfuncties
+                    - generic [ref=e330] [cursor=pointer]: Dialogue
+                    - generic [ref=e333] [cursor=pointer]: Chat
+                    - generic [ref=e336] [cursor=pointer]: Information systems
+                    - generic [ref=e339] [cursor=pointer]: Related
+                    - generic [ref=e342] [cursor=pointer]: Tasks
+                    - generic [ref=e345] [cursor=pointer]: Key Indicators
+                    - generic [ref=e348] [cursor=pointer]: History
+                    - generic [ref=e351] [cursor=pointer]: mo data
+                    - generic [ref=e354] [cursor=pointer]: Risks
+              - tabpanel "Dialogue" [ref=e356]:
+                - button "executer Questionnaire 1779357576350 Card image %" [ref=e366] [cursor=pointer]:
+                  - generic [ref=e367]:
+                    - img "executer" [ref=e369]
+                    - generic "Questionnaire 1779357576350" [ref=e370]:
+                      - generic [ref=e371]: Questionnaire 1779357576350
+                  - img "Card image" [ref=e373]
+                  - generic [ref=e375]:
+                    - generic [ref=e376]:
+                      - generic: "%"
+                    - button [ref=e378]:
+                      - img
+  - iframe [ref=e380]:
+    - generic [active]:
+      - generic:
+        - text:  
+        - button "Open chat" [ref=f6e1] [cursor=pointer]
+  - generic:
+    - dialog:
+      - generic [ref=e388]:
+        - banner [ref=e389]:
+          - generic [ref=e391]:
+            - listitem [ref=e392]:
+              - generic [ref=e394]: Questionnaire 1779357576350
+              - generic [ref=e395]:
+                - button [ref=e397] [cursor=pointer]:
+                  - img [ref=e399]:
+                    - img [ref=e400]
+                - button [ref=e402] [cursor=pointer]:
+                  - img [ref=e404]: mail
+                - button [ref=e406] [cursor=pointer]:
+                  - img [ref=e408]: close
+            - listitem [ref=e409]:
+              - generic [ref=e411]: "|"
+              - generic [ref=e413]: input
+              - generic [ref=e418] [cursor=pointer]:
+                - generic [ref=e419]:
+                  - generic [ref=e420]:
+                    - generic [ref=e421]: (1-1) Attributes questions
+                    - combobox "(1-1) Attributes questions Go to page" [ref=e422]: Attributes questions
+                  - generic:
+                    - generic: Go to page
+                - generic [ref=e424]: arrow_drop_down
+              - generic [ref=e426]: "|"
+        - main [ref=e428]:
+          - generic [ref=e431]:
+            - generic [ref=e432]:
+              - generic [ref=e434]: "Risk : Risk 1779357576350"
+              - generic [ref=e436]: Attributes questions
+            - generic [ref=e437]:
+              - listitem [ref=e442]:
+                - generic [ref=e445]:
+                  - generic [ref=e446]:
+                    - generic [ref=e450]: What is your name? *
+                    - textbox [ref=e456]:
+                      - /placeholder: Enter answer here
+                      - text: Anusha
+                    - generic [ref=e457] [cursor=pointer]: keyboard_arrow_down
+                  - generic [ref=e458] [cursor=pointer]: info
+              - listitem [ref=e463]:
+                - generic [ref=e467]:
+                  - generic [ref=e471]: What is your email? *
+                  - combobox [ref=e478] [cursor=pointer]
+                  - generic [ref=e479] [cursor=pointer]: keyboard_arrow_down
+        - contentinfo [ref=e480]:
+          - button "Complete" [ref=e484] [cursor=pointer]:
+            - generic [ref=e485]:
+              - generic [ref=e486]: Complete
+              - img [ref=e487]: check
+        - complementary [ref=e488]
+```
+
+# Test source
+
+```ts
+  32  |         const loginPage = new LoginPage(page);
+  33  |         await loginPage.goto();
+  34  |         await loginPage.signInWith();
+  35  |     });
+  36  | 
+  37  |     test("Configure questionnaire with 'No Settings' and verify 'Set item state to' action is executed when Question condition is triggered on 'Entering the questionnaire the first time' and check Questionnaire 'Generate report and send to service' action", async ({ page }) => {
+  38  |         test.setTimeout(3500000);
+  39  |         const leftNav = new LeftNavigation(page);
+  40  |         const kdPage = new KnowledgeDataBasePage(page);
+  41  |         const questionnairePage = new QuestionnairePage(page);
+  42  |         const questionsPage = new QuestionsPage(page);
+  43  |         const editPage = new QuestionnaireEditPage(page);
+  44  |         const questionConditionsPage = new QuestionConditionsPage(page);
+  45  |         const questionnaireConditionsPage = new QuestionnaireConditionsPage(page);
+  46  |         const settingsPage = new SettingsPage(page);
+  47  |         const navigationHelper = new NavigationHelper(page);
+  48  |         const environmentsPage = new EnvironmentsPage(page);
+  49  |         const risksPage = new RisksPage(page);
+  50  |         const indicatorsPage = new IndicatorsPage(page);
+  51  | 
+  52  | 
+  53  |         await test.step('Navigate to questionnaire configuration', async () => {
+  54  |             await leftNav.clickOnKnowledgeDatabase();
+  55  |             await kdPage.clickOnCompanyName(COMPANY_NAME);
+  56  |             await leftNav.clickOnMaintain();
+  57  |             await leftNav.clickOnQuestionnairesAndForms();
+  58  |             await kdPage.clickOnNoThanksPopup();
+  59  |         });
+  60  | 
+  61  |         await test.step('Create a questionnaire ', async () => {
+  62  |             await questionnairePage.createNewQuestionnaire(
+  63  |                 questionnaireConfig.QuestionnaireName,
+  64  |                 questionnaireConfig.QuestionnaireCode,
+  65  |                 questionnaireConfig.QuestionnaireType,
+  66  |             );
+  67  |         });
+  68  | 
+  69  |         await test.step('Configure questionnaire with settings and questions', async () => {
+  70  |             await editPage.clickOnQuestionnaireTab();
+  71  |             await questionsPage.enterPageTitle(pages.page1.title);
+  72  |             await questionsPage.configureQuestion(questions.question1);
+  73  |             await questionsPage.dragAndDropQuestionnaire(questions.question3.questionType);
+  74  |             await questionsPage.configureQuestion(questions.question2);
+  75  | 
+  76  |         });
+  77  | 
+  78  |         await test.step('Configure question conditions', async () => {
+  79  |             await editPage.clickOnQuestionConditionsTab();
+  80  |             await questionConditionsPage.createNewConditionTabWithData(questionConditions.tabs.tab1);
+  81  |             await questionConditionsPage.addConditionToTabWithData(questionConditions.conditions.condition1);
+  82  |             await questionConditionsPage.configureTriggerOn(questionConditions.triggerOn.enteringQuestionnaireFirstTime);
+  83  |             await questionConditionsPage.createConditionRules(questionConditions.conditionOn);
+  84  |             await questionConditionsPage.createActionRules(questionConditions.actionType);
+  85  |         });
+  86  | 
+  87  |         await test.step('Configure questionnaire conditions', async () => {
+  88  |             await editPage.clickOnQuestionnaireConditionsTab();
+  89  |             await questionnaireConditionsPage.createNewConditionTabWithData(questionnaireConditions.tabs.tab1);
+  90  |             await questionnaireConditionsPage.addConditionToTabWithData(questionnaireConditions.conditions.condition1);
+  91  |             await questionnaireConditionsPage.createConditionRules(questionnaireConditions.conditionOn);
+  92  |             await questionnaireConditionsPage.createActionRules(questionnaireConditions.actionType);
+  93  |         });
+  94  | 
+  95  |         await test.step('Configure indicators', async () => {
+  96  |             const indicators = questionnaireConfig.indicators;
+  97  |             await editPage.clickOnIndicatorsTab();
+  98  |             await indicatorsPage.configureIndicators(indicators);
+  99  |         });
+  100 | 
+  101 |         await test.step('Publish questionnaire', async () => {
+  102 |             await editPage.clickOnPublishOrEdit();
+  103 |             await editPage.verifyQuestionnaireIsPublished();
+  104 |         });
+  105 | 
+  106 |         await test.step('Navigate to risk management and link questionnaire', async () => {
+  107 |             await leftNav.clickOnDashboard();
+  108 |             await leftNav.hoverOnNotifications();
+  109 |             await navigationHelper.navigateToCompanyDashboard('Qualitlabs');
+  110 |             await environmentsPage.clickOnEnvironment("QualiTlabs Hyd");
+  111 |             await leftNav.clickOnModules();
+  112 |             await leftNav.clickOnRisksModule();
+  113 |         });
+  114 | 
+  115 |         await test.step('Create risk and link questionnaire', async () => {
+  116 |             await risksPage.clickOnAddNewRiskBtn();
+  117 |             await risksPage.createNewRiskWithData(risk);
+  118 |             await risksPage.clickDialogueTab();
+  119 |             await risksPage.linkQuestionnaireToRisk(questionnaireConfig.QuestionnaireName, 'QA Automation');
+  120 |             await risksPage.verifyAddedQuestionnaireLinked(questionnaireConfig.QuestionnaireName);
+  121 |         });
+  122 | 
+  123 |         const question1Locator = page.locator(`[data-test-mo-question-name="${questions.question1.Question.questionName}"]`);
+  124 |         const question2Locator = page.locator(`[data-test-mo-question-name="${questions.question2.Question.questionName}"]`);
+  125 |         const question3Locator = page.locator(`[data-test-mo-question-name="${questions.question3.questionType}"]`);
+  126 | 
+  127 | 
+  128 |         await test.step('Open questonnaire and verifyall questions are visible', async () => {
+  129 |             await risksPage.clickOnQuestionnaire(questionnaireConfig.QuestionnaireName);
+  130 |             await expect(question1Locator).toBeVisible();
+  131 |             await expect(question2Locator).toBeVisible();
+> 132 |             await expect(question3Locator).toBeVisible();
+      |                                            ^ Error: expect(locator).toBeVisible() failed
+  133 | 
+  134 |         })
+  135 | 
+  136 |         await test.step('Verify standard answer of the question 1', async () => {
+  137 |             await expect(question1Locator.getByRole('textbox')).toHaveValue(questions.question1.Question.standardAnswer);
+  138 |         })
+  139 | 
+  140 |         await test.step('Verify mandatory field state of the question 2', async () => {
+  141 |             await risksPage.clickCompleteButton();
+  142 |             await risksPage.verifyMandatoryFieldsErrorMessageDisplayed();
+  143 |             await risksPage.clickOkButton();
+  144 |             await risksPage.verifyValidationUnderQuestion(question2Locator, "This field is required!");
+  145 |             await question2Locator.locator('input').first().fill(process.env.USEREMAIL!);
+  146 |             await question2Locator.locator('input').blur();
+  147 |         })
+  148 | 
+  149 | 
+  150 |         await test.step('Verify item state set correctly after condition is triggered on entering the questionnaire ', async () => {
+  151 |             await risksPage.clickCloseQuestionnaireButton();
+  152 |             await risksPage.clickGrossRiskTab();
+  153 |             await risksPage.verifyRiskStatus(questionConditions.actionType[0].moduleState);
+  154 |             await risksPage.clickNetRiskTab();
+  155 |             await risksPage.verifyRiskStatus(questionConditions.actionType[0].moduleState);
+  156 |             await risksPage.clickHistoryTab();
+  157 |             await risksPage.verifyAuditLogFieldValue('New State', questionConditions.actionType[0].moduleState);
+  158 |             await risksPage.clickDialogueTab();
+  159 |             await risksPage.clickOnQuestionnaire(questionnaireConfig.QuestionnaireName);
+  160 | 
+  161 |         })
+  162 | 
+  163 |         await test.step('Finish Questionnaire', async () => {
+  164 |             await risksPage.clickCompleteButton();
+  165 |             await risksPage.verifyFinishMessageDisplayed()
+  166 |             await risksPage.clickYesButton();
+  167 |             await risksPage.verifyQuestionnaireIsFinished(questionnaireConfig.QuestionnaireName);
+  168 |         });
+  169 | 
+  170 |         await test.step('Verify Indicators added Succesfully', async () => {
+  171 |             await risksPage.clickKeyIndicatorTab();
+  172 |             await risksPage.verifyIndicatorIsDisplayedInIndicatorTab(indicators[0].name);
+  173 | 
+  174 |             await risksPage.clickGrossRiskTab();
+  175 |             await risksPage.verifyIndicatorIsDisplayedInGrossRiskTab(indicators[0].name);
+  176 |         })
+  177 | 
+  178 |         await test.step('Verify report is generated and send to service on all quetionnaires are completed', async () => {
+  179 |             await page.locator('[data-test-id="notifications"]').click();
+  180 |             const notification = page.locator('[role="listitem"][index="0"]');
+  181 |             await expect(notification.getByText('Generate report and send to service', { exact: true }).first()).toBeVisible();
+  182 |             await expect(notification.getByText('The report \'Test Report\' will be generated and sent to a service.',{ exact: true }).first()).toBeVisible();
+  183 |             await notification.getByRole('button', { name: 'Dismiss' }).first().click();
+  184 |             await page.getByText('close').first().click();
+  185 |         });
+  186 | 
+  187 | 
+  188 |     });
+  189 | 
+  190 | });
+```
