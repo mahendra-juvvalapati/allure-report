@@ -1,2 +1,0 @@
-Promise { 'number type question' }
-Downloaded File: Test document.docx
