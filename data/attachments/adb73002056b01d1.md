@@ -1,0 +1,216 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: questionnaireCreation.spec.ts >> Questionnaire Creation Tests >> TC_CR_006-Verify successful creation of a new questionnaire with type set to 'Survey'
+- Location: tests/questionnaireCreation.spec.ts:97:9
+
+# Error details
+
+```
+Error: expect(locator).toHaveText(expected) failed
+
+Locator:  locator('.ag-center-cols-container [role="row"]').first().locator('[col-id="owner"]')
+Expected: "mahendra"
+Received: "Mahendra"
+Timeout:  15000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 15000ms
+  - waiting for locator('.ag-center-cols-container [role="row"]').first().locator('[col-id="owner"]')
+    34 × locator resolved to <div comp-id="425" col-id="owner" role="gridcell" aria-colindex="5" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height">Mahendra</div>
+       - unexpected value "Mahendra"
+
+```
+
+```yaml
+- gridcell "Mahendra"
+```
+
+# Test source
+
+```ts
+  1   | import { Locator, Page, expect } from '@playwright/test';
+  2   | import fs from 'fs';
+  3   | import dayjs from 'dayjs';
+  4   | 
+  5   | export class UIActions {
+  6   |   constructor(private page: Page) { }
+  7   | 
+  8   |   async click(element: Locator) {
+  9   |     await expect(element).toBeVisible();
+  10  |     await expect(element).toBeEnabled();
+  11  |     await element.click();
+  12  |   }
+  13  | 
+  14  |   async doubleClick(element: Locator) {
+  15  |     await expect(element).toBeVisible();
+  16  |     await element.dblclick();
+  17  |   }
+  18  | 
+  19  |   async rightClick(element: Locator) {
+  20  |     await expect(element).toBeVisible();
+  21  |     await element.click({ button: 'right' });
+  22  |   }
+  23  | 
+  24  |   async hover(element: Locator) {
+  25  |     await expect(element).toBeVisible();
+  26  |     await element.hover();
+  27  |   }
+  28  | 
+  29  |   async type(element: Locator, value: string) {
+  30  |     await expect(element).toBeVisible();
+  31  |     await expect(element).toBeEnabled();
+  32  |     await element.clear();
+  33  |     await element.fill(value);
+  34  |     await expect(element).toHaveValue(value);
+  35  |   }
+  36  | 
+  37  |   async typeWithoutClearing(element: Locator, value: string) {
+  38  |     await expect(element).toBeEnabled();
+  39  |     await element.type(value);
+  40  | 
+  41  |     const currentValue = await element.inputValue();
+  42  |     expect(currentValue).toContain(value);
+  43  |   }
+  44  | 
+  45  |   async clear(element: Locator) {
+  46  |     await expect(element).toBeEnabled();
+  47  |     await element.clear();
+  48  |     await expect(element).toHaveValue('');
+  49  |   }
+  50  | 
+  51  |   async check(element: Locator) {
+  52  |     // await expect(element).toBeVisible();
+  53  |     await element.check();
+  54  |     await expect(element).toBeChecked();
+  55  |   }
+  56  | 
+  57  |   async uncheck(element: Locator) {
+  58  |     await expect(element).toBeVisible();
+  59  |     await element.uncheck();
+  60  |     await expect(element).not.toBeChecked();
+  61  |   }
+  62  | 
+  63  |   async selectByValue(element: Locator, value: string) {
+  64  |     await element.selectOption(value);
+  65  |     await expect(element).toHaveValue(value);
+  66  |   }
+  67  | 
+  68  |   async selectByLabel(element: Locator, label: string) {
+  69  |     await element.selectOption({ label });
+  70  |   }
+  71  | 
+  72  |   async getText(element: Locator): Promise<string> {
+  73  |     await expect(element).toBeVisible();
+  74  |     return (await element.textContent()) ?? '';
+  75  |   }
+  76  | 
+  77  |   async verifyText(element: Locator, expected: string) {
+> 78  |     await expect(element).toHaveText(expected);
+      |                           ^ Error: expect(locator).toHaveText(expected) failed
+  79  |   }
+  80  | 
+  81  |   async verifyContainsText(element: Locator, partial: string) {
+  82  |     await expect(element).toContainText(partial);
+  83  |   }
+  84  | 
+  85  |   async verifyValue(element: Locator, expected: string) {
+  86  |     await expect(element).toHaveValue(expected);
+  87  |   }
+  88  | 
+  89  |   async verifyCount(element: Locator, expected: number) {
+  90  |     await expect(element).toHaveCount(expected);
+  91  |   }
+  92  | 
+  93  |   async verifyAttribute(element: Locator, attributeName: string, expected: string) {
+  94  |     await expect(element).toHaveAttribute(attributeName, expected);
+  95  |   }
+  96  | 
+  97  |   async verifyChecked(element: Locator) {
+  98  |     await expect(element).toBeChecked();
+  99  |   }
+  100 | 
+  101 |   async verifyNotChecked(element: Locator) {
+  102 |     await expect(element).not.toBeChecked();
+  103 |   }
+  104 | 
+  105 |   async verifyAttached(element: Locator) {
+  106 |     await expect(element).toBeAttached();
+  107 |   }
+  108 | 
+  109 |   async verifyVisible(element: Locator) {
+  110 |     await expect(element).toBeVisible();
+  111 |   }
+  112 | 
+  113 |   async verifyNotVisible(element: Locator) {
+  114 |     await expect(element).not.toBeVisible();
+  115 |   }
+  116 | 
+  117 |   async verifyHidden(element: Locator) {
+  118 |     await expect(element).toBeHidden();
+  119 |   }
+  120 | 
+  121 |   async verifyEnabled(element: Locator) {
+  122 |     await expect(element).toBeEnabled();
+  123 |   }
+  124 | 
+  125 |   async verifyDisabled(element: Locator) {
+  126 |     await expect(element).toBeDisabled();
+  127 |   }
+  128 | 
+  129 |   async waitForVisible(element: Locator) {
+  130 |     await element.waitFor({ state: 'visible' });
+  131 |   }
+  132 | 
+  133 |   async waitForHidden(element: Locator) {
+  134 |     await element.waitFor({ state: 'hidden' });
+  135 |   }
+  136 | 
+  137 |   async waitForURL(url: RegExp | string) {
+  138 |     await this.page.waitForURL(url);
+  139 |   }
+  140 | 
+  141 |   async waitForLoad() {
+  142 |     await this.page.waitForLoadState('load');
+  143 |   }
+  144 | 
+  145 |   async scrollIntoView(element: Locator) {
+  146 |     await element.scrollIntoViewIfNeeded();
+  147 |   }
+  148 | 
+  149 |   async pressKey(element: Locator, key: string) {
+  150 |     await element.press(key);
+  151 |   }
+  152 | 
+  153 |   async pressOnPage(key: string) {
+  154 |     await this.page.keyboard.press(key);
+  155 |   }
+  156 | 
+  157 |   async uploadFile(element: Locator, filePath: string) {
+  158 |     await element.setInputFiles(filePath);
+  159 |   }
+  160 | 
+  161 |   async toggleSwitch(locator: Locator, expectedState: boolean) {
+  162 |     const currentState = await locator.getAttribute("aria-checked");
+  163 |     const isChecked = currentState === "true";
+  164 |     if (isChecked !== expectedState) {
+  165 |       await locator.click();
+  166 |     }
+  167 |     const updatedState = await locator.getAttribute("aria-checked");
+  168 |     expect(updatedState).toBe(expectedState ? "true" : "false");
+  169 |   }
+  170 | 
+  171 |   async toggleCheckbox(locator: Locator, expectedState: boolean) {
+  172 |     let isChecked: boolean;
+  173 |     try {
+  174 |       isChecked = await locator.isChecked();
+  175 |     } catch {
+  176 |       const ariaChecked = await locator.getAttribute("aria-checked");
+  177 |       isChecked = ariaChecked === "true";
+  178 |     }
+```
