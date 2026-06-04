@@ -1,0 +1,53 @@
+locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for getByTestId('Qualitlabs')
+
+    at NavigationHelper.navigateToCompanyDashboard (/home/runner/work/fic-automation-tests/fic-automation-tests/src/helpers/navigation.helper.ts:13:30)
+    at /home/runner/work/fic-automation-tests/fic-automation-tests/tests/E2E_Tests/FC013_questionnaire.spec.ts:109:36
+    at /home/runner/work/fic-automation-tests/fic-automation-tests/tests/E2E_Tests/FC013_questionnaire.spec.ts:106:9 {
+  name: 'TimeoutError',
+  Symbol(step): {
+    location: {
+      file: '/home/runner/work/fic-automation-tests/fic-automation-tests/src/helpers/navigation.helper.ts',
+      line: 13,
+      column: 30,
+      function: 'NavigationHelper.navigateToCompanyDashboard'
+    },
+    category: 'pw:api',
+    title: "Click getByTestId('Qualitlabs')",
+    apiName: 'locator.click',
+    params: {
+      selector: 'internal:testid=[data-test-id="Qualitlabs"s]',
+      strict: true,
+      timeout: 15000
+    },
+    group: undefined,
+    stepId: 'pw:api@795',
+    boxedStack: undefined,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [TestInfoImpl],
+      _stepId: 'pw:api@795',
+      _title: "Click getByTestId('Qualitlabs')",
+      _parentStep: [TestStepInfoImpl],
+      skip: [Function (anonymous)]
+    },
+    complete: [Function: complete],
+    endWallTime: 1780565640087,
+    error: {
+      message: 'TimeoutError: locator.click: Timeout 15000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for getByTestId('Qualitlabs')\x1B[22m\n",
+      stack: 'TimeoutError: locator.click: Timeout 15000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for getByTestId('Qualitlabs')\x1B[22m\n" +
+        '\n' +
+        '    at NavigationHelper.navigateToCompanyDashboard (/home/runner/work/fic-automation-tests/fic-automation-tests/src/helpers/navigation.helper.ts:13:30)\n' +
+        '    at /home/runner/work/fic-automation-tests/fic-automation-tests/tests/E2E_Tests/FC013_questionnaire.spec.ts:109:36\n' +
+        '    at /home/runner/work/fic-automation-tests/fic-automation-tests/tests/E2E_Tests/FC013_questionnaire.spec.ts:106:9',
+      cause: undefined
+    }
+  }
+}
